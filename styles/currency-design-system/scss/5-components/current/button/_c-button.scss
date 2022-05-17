@@ -1,0 +1,255 @@
+@import 'var-button';
+
+// Button Component Instantiation
+// Requires Proto Button
+
+.c-button {
+    @include proto-button();
+    
+    &-small {
+        @include proto-small-button();
+
+        &--primary {
+            @include proto-small-button--primary();
+
+            &-loading {
+                @include proto-button--primary();
+                font-size: 0; // Removes space between dots        
+                @include dots-loading($buttonPrimaryLoadingDotColor);
+
+                &:hover {
+                    cursor: $buttonLoadingCursor;
+                }
+            }
+
+            &--disabled {
+                @include proto-small-button--primary();
+                background-color: $buttonDisabledColor;
+                border-color: $buttonDisabledBorderColor;
+                border-width: $buttonPrimaryDisabledBorderWidth;
+                color: $buttonDisabledTextColor;
+    
+                &:hover {
+                    background-color: $buttonDisabledColor;
+                    border-color: $buttonDisabledBorderColor;
+                    color: $buttonDisabledTextColor;
+                    cursor: $buttonDisabledCursor;
+                }
+            }
+        }
+
+        &--disabled {
+            @include proto-small-button();
+            background-color: $buttonDisabledColor;
+            border-color: $buttonDisabledBorderColor;
+            color: $buttonDisabledTextColor;
+
+            &:hover {
+                background-color: $buttonDisabledColor;
+                border-color: $buttonDisabledBorderColor;
+                color: $buttonDisabledTextColor;
+                cursor: $buttonDisabledCursor;
+            }
+        }
+
+        &--subtle {
+            @include proto-small-button();
+            background-color: $buttonSubtleBackgroundColor;
+            border: $buttonSubtleBorderWeight $buttonSubtleBorderStyle $buttonSubtleBorderColor;
+            color: $buttonSubtleTextColor;
+            text-decoration: $buttonSubtleTextStyle;
+
+            &:visited {
+                background-color: $buttonSubtleBackgroundColor;
+            }
+
+            &:hover {
+                background-color: darken($buttonSubtleBackgroundColor, $buttonDarkenValue);
+                border-color: darken($buttonSubtleBorderColor, $buttonDarkenValue);
+                color: $buttonSubtleTextColor;
+            }
+
+            &:active {
+                background-color: darken($buttonSubtleBackgroundColor, $buttonDarkenValue);
+                border-color: darken($buttonSubtleBorderColor, $buttonDarkenValue);
+            }
+
+            &-loading {
+                @extend .c-button--subtle;
+                font-size: 0; // Removes space between dots
+                @include dots-loading($buttonSubtleLoadingDotColor);
+
+                &:hover {
+                    cursor: $buttonLoadingCursor;
+                }
+            }
+        }
+    }
+
+    &-loading {
+        @include proto-button();
+        font-size: 0; // Removes space between dots
+        @include dots-loading($buttonLoadingDotColor);
+
+        &:hover {
+            cursor: $buttonLoadingCursor;
+        }
+    }
+
+    // Primary button styles - This is the main call to action on the page
+    &--primary {
+        @include proto-button--primary();
+
+        &-loading {
+            @include proto-button--primary();
+            font-size: 0; // Removes space between dots        
+            @include dots-loading($buttonPrimaryLoadingDotColor);
+
+            &:hover {
+                cursor: $buttonLoadingCursor;
+            }
+        }
+
+        &--disabled {
+            @include proto-button--primary();
+            background-color: $buttonDisabledColor;
+            border-color: $buttonDisabledBorderColor;
+            border-width: $buttonPrimaryDisabledBorderWidth;
+            color: $buttonDisabledTextColor;
+
+            &:hover {
+                background-color: $buttonDisabledColor;
+                border-color: $buttonDisabledBorderColor;
+                color: $buttonDisabledTextColor;
+                cursor: $buttonDisabledCursor;
+            }
+        }
+    }
+
+    &--subtle {
+        @include proto-button();
+        background-color: $buttonSubtleBackgroundColor;
+        border: $buttonSubtleBorderWeight $buttonSubtleBorderStyle $buttonSubtleBorderColor;
+        color: $buttonSubtleTextColor;
+        text-decoration: $buttonSubtleTextStyle;
+
+        &:visited {
+            background-color: $buttonSubtleBackgroundColor;
+        }
+
+        &:hover {
+            background-color: darken($buttonSubtleBackgroundColor, $buttonDarkenValue);
+            border-color: darken($buttonSubtleBorderColor, $buttonDarkenValue);
+            color: $buttonSubtleTextColor;
+        }
+
+        &:active {
+            background-color: darken($buttonSubtleBackgroundColor, $buttonDarkenValue);
+            border-color: darken($buttonSubtleBorderColor, $buttonDarkenValue);
+        }
+
+        &-loading {
+            @extend .c-button--subtle;
+            font-size: 0; // Removes space between dots
+            @include dots-loading($buttonSubtleLoadingDotColor);
+
+            &:hover {
+                cursor: $buttonLoadingCursor;
+            }
+        }
+    }
+
+    &--disabled {
+        @include proto-button();
+        background-color: $buttonDisabledColor;
+        border-color: $buttonDisabledBorderColor;
+        color: $buttonDisabledTextColor;
+
+        &:hover {
+            background-color: $buttonDisabledColor;
+            border-color: $buttonDisabledBorderColor;
+            color: $buttonDisabledTextColor;
+            cursor: $buttonDisabledCursor;
+        }
+    }
+
+    &--back {
+       @include proto-button--back();
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:disabled {
+            color: $buttonBackDisabledColor;
+            border: $buttonBackDisabledBorder;
+            cursor: not-allowed;
+        }
+    }
+
+    // Added by T7 - Review
+    @if $isWTC == true {
+        &:focus {
+            box-shadow: $buttonFocusBoxShadow;            
+        }
+
+        &--primary {
+            &:focus {                
+                box-shadow: $buttonPrimaryFocusBoxShadow;
+            }
+        }
+        
+        // Being used in Legacy modal
+        &--secondary {
+            background-color: $buttonSecondaryBackgroundColor;
+            border: $buttonSecondaryBorderWeight $buttonSecondaryBorderStyle $buttonSecondaryBorderColor;
+            color: $buttonSecondaryTextColor;
+
+            &:visited {
+                background-color: $buttonSecondaryBackgroundColor;
+                border: $buttonSecondaryBorderWeight $buttonSecondaryBorderStyle $buttonSecondaryBorderColor;
+                color: $buttonSecondaryTextColor;
+            }
+
+            &:hover {
+                color: $buttonHoverColor;
+                background-color: $buttonSecondaryBackgroundColor;
+                border: $buttonSecondaryBorderWeight $buttonSecondaryBorderStyle $buttonSecondaryBorderColor;
+            }           
+
+            &-disabled {
+                background-color: $colorGrayscaleWhite;
+                border: $buttonPrimaryBorderWeight $buttonPrimaryBorderStyle $colorGrayscaleGrayLight;
+                color: $colorGrayscaleGrayBase;
+
+                &:hover {
+                    background-color: $colorGrayscaleWhite;
+                    border: $buttonPrimaryBorderWeight $buttonPrimaryBorderStyle $colorGrayscaleGrayLight;
+                    color: $colorGrayscaleGrayBase;
+                }
+            }
+        }
+
+        &-small {
+            &:focus {
+                box-shadow: $buttonSmallFocusBoxShadow;                    
+            }
+            &--primary {
+                &:focus {
+                    box-shadow: $buttonSmallPrimaryFocusBoxShadow;                    
+                }
+            }
+        }
+
+        &--disabled {
+            &:focus {
+                box-shadow: none;                    
+            }
+        }
+    }
+
+    // Added by T7 - Review
+    &--default-width {
+        width: 160px;
+    }
+}

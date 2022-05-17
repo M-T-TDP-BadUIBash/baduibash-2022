@@ -1,0 +1,11 @@
+@mixin outline-focus {
+    z-index: 1000;
+    outline-width: 2px;
+    outline-offset: -2px;
+    outline-style: solid;
+    outline-color: -moz-focusring;
+    outline-color: -moz-mac-focusring;
+    outline-color: -webkit-focus-ring-color;
+    outline-color: -o-focus-ring-color;
+    outline-color: -ms-focus-ring-color;
+}

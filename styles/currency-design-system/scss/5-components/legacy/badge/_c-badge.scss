@@ -1,0 +1,14 @@
+// .c-badge {
+//     &--active {
+//         @include proto-badge ();
+//         border: $badgeBorderSize $badgeBorderStyle $badgeActiveBorderColor;
+//     }
+//     &--pending {
+//         @include proto-badge ();
+//         border: $badgeBorderSize $badgeBorderStyle $badgePendingBorderColor;
+//     }
+//     &--informational {
+//         @include proto-badge ();
+//         border: $badgeBorderSize $badgeBorderStyle $badgeInformationalBorderColor;
+//     }
+// }

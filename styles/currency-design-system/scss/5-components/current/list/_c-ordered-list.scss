@@ -1,0 +1,11 @@
+@import 'var-list';
+
+.c-ordered-list {
+  @include proto-list();
+  list-style: $listOrderedListStyle;
+
+  &__item {
+    @include proto-list__item();
+  }
+
+}

@@ -1,0 +1,45 @@
+.c-toggle {
+    @if $isWTC == true {
+      &__container {
+        border-bottom: $toggleContainerBorderSize solid $toggleContainerBorderBottomColor;
+        width: 100%;
+        color: $toggleContainerColor;
+      }
+
+      &__content {
+        position: relative;
+        top: $toggleContentTop;
+        margin: 0 !important;
+      }
+
+      &__section:hover {
+        cursor: pointer;
+        color: $toggleSectionColor;
+      }
+
+      &__section {
+        padding-bottom: $toggleSectionPaddingBottom;
+        height: 100%;
+        box-sizing: border-box;
+
+        &--selected {
+          position: relative;
+          border-bottom: $toggleContainerBorderSize solid $toggleSelectedBorderColor;
+          color: $toggleSectionColor;
+          font-weight: $toggleFontWeight;
+
+          &:after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: $toggleSelectedBorderSize solid transparent;
+            border-right: $toggleSelectedBorderSize solid transparent;
+            border-top: $toggleSelectedBorderSize solid $toggleSelectedBorderColor;
+            position: absolute;
+            bottom: $toggleSelectedBottom;
+            left: calc(50% - #{$toggleSelectedLeft});
+          }
+        }
+      }
+    }
+}

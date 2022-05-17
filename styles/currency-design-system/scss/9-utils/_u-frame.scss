@@ -1,0 +1,17 @@
+
+.u-frame {
+  &--rectangle {
+    background: $colorWhite;
+    border-radius: 0;
+
+    &-rounded {
+      background: $colorWhite;
+      border-radius: 4px;
+    }
+  }
+
+  &--oval {
+    background: $colorWhite;
+    border-radius: 50%;
+  }
+}

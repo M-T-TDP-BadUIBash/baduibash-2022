@@ -1,0 +1,18 @@
+$wt-spinner-tokens: (
+    spinnerHeight: 42px,
+    spinnerWidth: 42px,
+    spinnerTime: 1s,
+    spinnerInnerLeft: 8px,
+    spinnerInnerTop: 7px,
+    spinnerMaskLeft: 0,
+    spinnerMaskTop: 0,
+    spinnerOuterLeft: 0,
+    spinnerOuterTop: 0,
+    spinnerMaskBorderRadius: 5px,
+    spinnerMaskBackgroundColor: #ffffffe6,
+    spinnerMaskWidth: 100%,
+    spinnerMaskHeight: 100%,
+    spinnerZIndex: 998,
+    spinnerLogoBoxShadowColor: $colorGrayscaleWhite,
+    spinnerLogoBoxShadowSpacing: 10px
+  );

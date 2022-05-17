@@ -1,0 +1,36 @@
+@import "flex-grid-var", "flex-grid-alignment", "flex-grid-cols";
+
+@include flexGridColsInitialize(xs);
+@include flexGridColsInitialize(sm);
+@include flexGridColsInitialize(md);
+@include flexGridColsInitialize(lg);
+@include flexGridColsInitialize(xl);
+@include flexGridColsInitialize(xxl);
+
+@include flexGridAlignment(xs);
+@include flexGridColsBreakpoint(xs);
+
+@media only screen and (min-width: $breakpoint--small) {
+  @include flexGridAlignment(sm);
+  @include flexGridColsBreakpoint(sm);
+}
+
+@media only screen and (min-width: $breakpoint--medium) {
+  @include flexGridAlignment(md);
+  @include flexGridColsBreakpoint(md);
+}
+
+@media only screen and (min-width: $breakpoint--large) {
+  @include flexGridAlignment(lg);
+  @include flexGridColsBreakpoint(lg);
+}
+
+@media only screen and (min-width: $breakpoint--xlarge) {
+  @include flexGridAlignment(xl);
+  @include flexGridColsBreakpoint(xl);
+}
+
+@media only screen and (min-width: $breakpoint--xxlarge) {
+  @include flexGridAlignment(xxl);
+  @include flexGridColsBreakpoint(xxl);
+}

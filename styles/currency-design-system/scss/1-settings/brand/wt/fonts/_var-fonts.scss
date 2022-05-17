@@ -1,0 +1,76 @@
+$fontFace: "GothamSSm";
+$fontType: "otf";
+// $fontFileNameThin: "GothamSSm-Light";
+// $fontFileNameThinItalic: "ProximaNova-LightItalic";
+$fontFileNameNormal: "GothamSSm-Book";
+// $fontFileNameNormalItalic: "ProximaNova-RegularItalic";
+
+$fontFileNameBook: "GothamSSm-Book";
+$fontFileNameMedium: "GothamSSm-Medium";
+
+$fontFileNameBold: "GothamSSm-Bold";
+// $fontFileNameBoldItalic: "ProximaNova-BoldItalic";
+
+// Mixin Generates Font Family Tags
+@mixin font-face($family, $style, $weight, $src, $path) {
+    @font-face {
+        font-family: quote($family);
+        font-style: $style;
+        font-weight: $weight;
+
+        @if ($src==woff) {
+            src: url(quote($path + '.woff'));
+        }
+
+        @if ($src==eot) {
+            src: url(quote($path + '.eot'));
+        }
+
+        @if ($src==otf) {
+            src: url(quote($path + '.otf'));
+        }
+    }
+}
+
+@each $type in $fontType {
+    // @include font-face(quote($fontFace), normal, 200, $type, quote($_localFontPath + $fontFileNameThin));
+    // @include font-face(quote($fontFace), italic, 200, $type, quote($_localFontPath + $fontFileNameThinItalic));
+
+    @include font-face(quote($fontFace), normal, normal, $type, quote($_localFontPath + $fontFileNameNormal));
+    // @include font-face(quote($fontFace), italic, normal, $type, quote($_localFontPath + $fontFileNameNormalItalic));
+
+    @include font-face(quote($fontFace), normal, 400, $type, quote($_localFontPath + $fontFileNameBook));
+    @include font-face(quote($fontFace), normal, 500, $type, quote($_localFontPath + $fontFileNameMedium));
+
+    @include font-face(quote($fontFace), normal, 700, $type, quote($_localFontPath + $fontFileNameBold));
+    // @include font-face(quote($fontFace), italic, 700, $type, quote($_localFontPath + $fontFileNameBoldItalic));
+}
+
+$icon-font-path:        $_localFontPath;
+$icon-background-color: #eee !default;
+$icon-li-margin-right:  0.4em !default;
+
+@font-face {
+    font-family: 'wtc';
+    src: url('#{$icon-font-path}wtc.eot');
+    src: url('#{$icon-font-path}wtc.eot') format('embedded-opentype'),
+      url('#{$icon-font-path}wtc.woff2') format('woff2'),
+      url('#{$icon-font-path}wtc.woff') format('woff'),
+      url('#{$icon-font-path}wtc.ttf') format('truetype'),
+      url('#{$icon-font-path}wtc.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+// Generate the Variables Based on the Theme
+$typeScaleXXXSmall: 10px; // does not exist for M&T
+$typeScaleXXSmall: 11px; // was 10px, 10px for M&T
+$typeScaleXSmall: 12px; // was 11px
+$typeScaleSmall: 14px; // was 12px
+$typeScaleMedium: 16px; // was 14px
+$typeScaleLarge: 18px;  // was 16px
+$typeScaleXLarge: 24px;
+$typeScaleXXLarge: 32px;
+$typeScaleXXXLarge: 44px;
+$typeLineHeightIncrement: 4px;
+//t7 added
+$typeScaleXXXXLarge: 44px;

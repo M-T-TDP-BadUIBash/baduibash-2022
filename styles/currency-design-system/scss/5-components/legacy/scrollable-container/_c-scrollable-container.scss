@@ -1,0 +1,46 @@
+.c-scrollable-container {
+    @if $isWTC == true {
+      position: $scrollableContainerPosition;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: $scrollableContainerAfterBottom;
+        width: $scrollableContainerAfterWidth;
+        height: $scrollableContainerAfterHeight;
+        background: linear-gradient($scrollableContainerAfterBackgroundColor, white);
+      }
+
+      &__scroller {
+        height: $scrollableContainerScrollerHeight;
+        overflow-y: $scrollableContainerScrollerOverflowy;
+        padding-bottom: $scrollableContainerScrollerPaddingBottom;
+      }
+
+      &__outer-container-shadow {
+        box-shadow: 0 $scrollableContainerOuterContainerShadowRight $scrollableContainerOuterContainerShadowBottom 0 $scrollableContainerOuterContainerShadowColor;
+      }
+    }
+}
+
+/* width */
+::-webkit-scrollbar {
+    @if $isWTC == true {
+        width: $scrollableContainerWebkitScrollbarWidth;
+    }
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    @if $isWTC == true {
+        background: none;
+    }
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    @if $isWTC == true {
+      background: $scrollableContainerWebkitScrollbarThumbBg;
+      border-radius: $scrollableContainerWebkitScrollbarThumbRadius;
+    }
+}

@@ -1,0 +1,129 @@
+@import 'var-checkbox';
+
+// Checkbox boundaries
+.c-checkbox {
+  background: $checkboxBackground;
+  color: $checkboxFontColor;
+  cursor: $checkboxCursor;
+  display: $checkboxDisplay;
+  font-family: $checkboxFontFamily;
+  font-size: $checkboxFontSize;
+  font-weight: $checkboxFontWeight;
+  padding-left: $checkboxSize + $checkboxPaddingLeftIncrement;
+  position: $checkboxPosition;
+  line-height: $checkboxSize;
+  margin: $checkboxMargin;
+  min-height: $checkboxSize;
+  @include prefixer(user-select, none); 
+  padding: $checkBoxPadding;
+
+  // Container for all associated checkbox elements
+  &__container {    
+    cursor: $checkboxCursor;
+    border: $containerBorderSize $containerBorderStyle $containerBorderColor;
+    @include prefixer(border-radius, $containerBorderRadius);
+    display: $containerDisplay;
+    width: $containerWidth;
+
+    label {
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+      cursor: pointer;
+      padding: $checkboxContainerLabelPadding;
+      line-height: $checkboxContainerLabelLineHight;
+    }  
+    
+    &--no-container {
+      margin-bottom: $checkboxNoContainerMarginBottom;
+    }
+  }
+
+  // Hide the browser's default checkbox
+  &__input {
+    @include visually-hidden();
+
+    &:focus ~ .c-checkbox {
+      outline: $checkboxFocusOutline;
+    }
+
+    // When the checkbox is checked, add a dark background
+    &:checked ~ .c-checkbox .c-checkbox__checkmark, &:checked ~ .c-checkbox .c-checkbox__checkmark--no-container    {
+      background-color: $checkboxCheckmarkColor;
+    }
+
+    // Show the checkmark when checked
+    &:checked ~ .c-checkbox .c-checkbox__checkmark .c-checkbox__checkmark-icon, &:checked ~ .c-checkbox .c-checkbox__checkmark--no-container .c-checkbox__checkmark-icon {
+      display: $checkboxCheckmarkCheckedDisplay;
+      color: #fff;
+      font-size: $checkboxCheckedFontSize;
+      margin-top: $checkboxCheckedMarginTop;
+    }
+  }
+
+  &--error {
+    border: $textFieldErrorBorderSize $textFieldErrorBorderStyle $textFieldErrorBorderColor;
+    color: $textFieldErrorInputColor;
+  }
+
+  // Create a custom checkbox
+  &__checkmark {
+    background-color: $checkboxCheckmarkBackgroundColor;
+    border: $checkboxCheckmarkBorderSize $checkboxCheckmarkBorderStyle $checkboxBorderColor;
+    @include prefixer(border-radius, $checkboxCheckmarkBorderRadius);
+    @include prefixer(box-sizing, border-box);
+    height: $checkboxSize;
+    left: $checkboxCheckmarkLeftPosition;
+    position: $checkboxCheckmarkPosition;   
+    width: $checkboxSize;
+
+    &--no-container {
+      background-color: $checkboxCheckmarkBackgroundColor;
+      border: $checkboxCheckmarkBorderSize $checkboxCheckmarkBorderStyle $checkboxBorderColor;
+      @include prefixer(border-radius, $checkboxCheckmarkBorderRadius);
+      @include prefixer(box-sizing, border-box);
+      height: $checkboxSize;
+      left: $checkboxCheckmarkNoContainerLeftPosition;
+      position: $checkboxCheckmarkPosition;
+      width: $checkboxSize;
+    }
+
+    &-icon {
+      @include animate($checkboxCheckmarkAnimationName, $checkboxCheckmarkAnimationDuration, $checkboxCheckmarkAnimationFillMode);
+      display: $checkboxCheckmarkDisplay;
+      fill: $checkboxCheckmarkBackgroundColor;
+    }
+  }
+  // Checkbox group container
+  &-group {
+    width: $checkboxGroupWidth;
+
+    // Target only checkbox elements inside group and remove its bottom border and corners
+    .c-checkbox__container {
+      border-bottom: $checkboxGroupBorderBottom;
+      border-radius: $checkboxGroupBorderRadius;
+      margin-bottom: $checkboxGroupContainerMarginBottom;
+
+      // Remove bottom corners from the first item
+      &:first-child {
+        @include prefixer(border-radius, $checkboxGroupFirstChildBorderRadius);
+      }
+
+      // Remove top corners from the top item and return its bottom border
+      &:last-child {
+        @include prefixer(border-radius, $checkboxGroupLastChildBorderRadius);
+        border-bottom: $checkboxGroupLastChildBorderSize $checkboxGroupLastChildBorderStyle $checkboxGroupLastChildBorderColor;
+      }
+    }
+
+    &--error {
+      border: $textFieldErrorBorderSize $textFieldErrorBorderStyle $textFieldErrorBorderColor;
+      color: $textFieldErrorInputColor;
+
+      .c-checkbox__container {
+        margin-bottom: 0;
+      }
+      
+    }
+  }
+}

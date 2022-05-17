@@ -1,0 +1,9 @@
+// Focus Styles
+$breakpoint--xsmall: systemTheme(breakpoints, breakpoint--xsmall);
+$breakpoint--small: systemTheme(breakpoints, breakpoint--small);
+$breakpoint--medium: systemTheme(breakpoints, breakpoint--medium);
+$breakpoint--large: systemTheme(breakpoints, breakpoint--large);
+$breakpoint--xlarge: systemTheme(breakpoints, breakpoint--xlarge);
+$breakpoint--xxlarge: systemTheme(breakpoints, breakpoint--xxlarge);
+$mobileBreakpoint: systemTheme(breakpoints, mobileBreakpoint);
+$desktopBreakpoint: systemTheme(breakpoints, desktopBreakpoint);

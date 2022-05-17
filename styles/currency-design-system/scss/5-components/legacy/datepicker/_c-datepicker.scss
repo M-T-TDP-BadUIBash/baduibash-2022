@@ -1,0 +1,61 @@
+
+.c-datepicker.mat-calendar {
+    @if $isWTC == true {
+      height: auto;
+      padding: $spacingLarge;
+      border: 1px solid $colorGrayscaleGrayBase;
+      box-shadow: 0 2px 6px 0 rgba(66, 89, 104, 0.4);
+
+      .mat-icon-button[aria-label="Previous year"], .mat-icon-button[aria-label="Next year"] {
+        display: none;
+      }
+
+      .mat-calendar-period-button {
+        display: none;
+      }
+
+      .mat-calendar-body-disabled {
+        cursor: default;
+        opacity: .5;
+        pointer-events: none;
+
+        .mat-calendar-body-cell-content:hover {
+          background: $colorGrayscaleWhite;
+        }
+      }
+
+      .mat-calendar-content {
+        padding: 0;
+      }
+
+      .mat-calendar-header {
+        padding: 0;
+      }
+
+      .mat-calendar-controls {
+        margin-top: 0;
+      }
+
+      .mat-calendar-table-header-divider {
+        display: none;
+      }
+
+      .mat-calendar-body-cell-content {
+        background: $colorGrayscaleWhite;
+        color: $colorPrimaryBase;
+        border: 1px solid $colorGrayscaleGrayLight;
+        border-radius: 16px;
+        padding: 14px 16px;
+        cursor: pointer;
+        font-size: 12px;
+        height: auto;
+        width: auto;
+        line-height: inherit;
+        box-shadow: none;
+
+        &:hover, &.mat-calendar-body-today {
+          background: $colorGrayscaleGrayLight;
+        }
+      }
+    }
+}

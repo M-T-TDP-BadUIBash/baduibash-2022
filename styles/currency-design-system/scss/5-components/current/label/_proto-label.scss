@@ -1,0 +1,12 @@
+// Change with caution, these are used throughout multiple instances.
+// Alter only if you are certain that the change should cascade to all instances within all components and elements.
+// Most edits to prototypes should be extending by adding variations rather than altering current code
+
+@mixin proto-label {
+    color: $labelFontColor;
+    display: block;
+    font-family: $labelFontFamily;
+    font-size: $labelFontSize;
+    font-weight: $labelFontWeight;
+    margin-bottom: $spacingXSmall;
+}

@@ -1,0 +1,97 @@
+$titleFontFamily: $typeFontFamily;
+
+$titleOneSize: $typeScaleXXLarge;
+$titleOneWeight: $typeFontWeightLight;
+$titleOneLineHeight: $typeScaleXXLarge + 6px;
+
+$titleTwoSize: $typeScaleXLarge;
+$titleTwoWeight: $typeFontWeightLight;
+$titleTwoLineHeight: $typeScaleXLarge + 6px;
+
+$titleThreeSize: $typeScaleMedium;
+$titleThreeWeight: $typeFontWeightMedium;
+$titleThreeLineHeight: 24px;
+
+$titleFourSize: $typeScaleXSmall;
+$titleFourWeight: $typeFontWeight;
+$titleFourLineHeight: $typeScaleXSmall + 6px;
+$titleFourTextTransform: uppercase;
+$titleFourLetterSpacing: 2px;
+
+$titleColor: $colorPrimaryBase;
+$titleNormalColor: $colorGrayDarker;
+$titleSubtleColor: $colorGrayLight;
+//$titleLightColor is a common token
+
+$titleLightColor: $colorWhite;
+$titleFontWeightHeavy: $typeFontWeightMedium;
+$titleBorder: none;
+$titleDisplay: block;
+$titleFontStyle: normal;
+$titleFontVariant: normal;
+$titleIsolation: isolate;
+$titleLetterSpacing: 0;
+$titleMargin: 0;
+$titleMarginBlockEnd: 0;
+$titleMarginBlockStart: 0;
+$titleMarginInlineEnd: 0;
+$titleMarginInlineStart: 0;
+$titleOverflow: visible;
+$titlePadding: 0;
+$titleTextAlign: left;
+$titleTextDecoration: none;
+$titleTextJustify: none;
+$titleTextOverflow: inherit;
+$titleTextRendering: optimizeLegibility;
+$titleTextTransform: none;
+$titleTextShadow: none;
+$titleVerticalAlign: baseline;
+$titleWordBreak: keep-all;
+$titleWordWrap: break-word;
+$titleWritingMode: horizontal-tb;
+$titleLineHeightIncrement: 4;
+
+$textContentFontColor: $colorGrayDarker;
+$textContentAttentionFontColor: $colorGrayDarker;
+$textContentSubtleFontColor: $colorGrayBase;
+$textContentDisclaimerFontColor: $colorGrayDark;
+$textContentLineHeightIncrement: 6;
+$textContentWidth: 100%;
+$textContentFontWeight: $typeFontWeightLight;
+// needed for WT
+$titleOneLetterSpacing: normal;
+$titleTwoLetterSpacing: normal;
+$titleThreeLetterSpacing: normal;
+
+
+
+@if $isWTC {
+
+    $titleOneSize: $typeScaleXXLarge;
+    $titleOneWeight: $typeFontWeightRegular;
+    $titleOneLineHeight: 40px;
+    $titleOneLetterSpacing: -2px;
+    $titleTwoSize: $typeScaleXLarge;
+    $titleTwoWeight: $typeFontWeightMedium;
+    $titleTwoLineHeight: 30px;
+    $titleTwoLetterSpacing: -1.5px;
+    $titleThreeSize: $typeScaleLarge;
+    $titleThreeWeight: $typeFontWeightMedium;
+    $titleThreeLineHeight: 24px;
+    $titleThreeLetterSpacing: -1px;
+    $titleFourSize: $typeScaleSmall;
+    $titleFourLineHeight: 20px;
+    $titleFourWeight: $typeFontWeightBold;
+    $titleFourLetterSpacing: 0;
+    $titleFourTextTransform: none;
+    $titleColor: $colorPrimaryBase;
+    $titleSubtleColor: $colorGrayDarkest;
+    $titleDarkColor: $colorGrayDarkest;
+
+    $textContentSubtleFontColor: $colorPrimaryBase;
+    $textContentDisclaimerFontColor: $colorGrayscaleGrayBase;
+    $titleNormalColor: $colorPrimaryBase;
+}
+
+
+

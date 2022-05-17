@@ -1,0 +1,78 @@
+/******************************************
+
+        Important: File order Matters!
+        The system uses BEM, ITCSS and OOCSS to maintain a modular design.
+        For more information please refer to '...'
+
+******************************************/
+
+// Configuration //
+// Instantiate Fonts - Adjust Local Path To Local Instance of Font Files
+$_localFontPath: "../fonts/";
+$_arrowPath: "../images/dropdownArrow.svg";
+$_fillPath: "../images/dropdownFill.svg";
+
+// Set theme tokens choose either 'mtb-tokens' or 'wt-tokens'.  This is then interperated by theme logic.
+@import "1-settings/theming/mtb-tokens";
+
+// Settings //
+// Generally a collection of variables that do not generate CSS, but are applied to classes.
+// Some examples include:
+// * Base
+// * Color
+// * Typography
+// * Animation
+
+@import "1-settings/theming/theme-logic",
+  // Function that creates mapping for theme to local Variables - Do Not Modify
+    "1-settings/__var-index"; // Exposed Variables for use
+
+// Tools //
+// * Typically preprocessor functions that help write or extend properties on classes:
+// * Functions
+// * Placeholders
+// * Mixins
+// * Media queries
+@import "2-tools/__tools-index";
+
+// Vendors //
+// Third-party styles that are being used on a project. ie Bootstrap or Foundation.
+//@import '3-vendors/__vendor-index';
+
+// Layouts //
+// Namespace: l-
+// Are used for design patterns, where items are being arranged rather than decorated.
+// Layout classes are used across all pages, so if you make any changes to the layout classes,
+// you should be VERY CAREFUL because any changes are going to affect each and every page throughout
+// the website.
+//@import '7-layouts/__layout-index';
+
+// Elements //
+// namespace: e-
+// Are the HTML native elements.
+// These should not be used to compose components.  Are ment for use as a standalone element only.
+@import "4-defaults/_defaults-index";
+
+// Components //
+// namespace: c-
+// Is a small feature that makes up a part of the website.
+// Think buttons, accordions, sliders, modal dialogs, etc.
+// Each component is fully functional by itself and does not rely on any other components.
+@import "5-components/__component-index";
+
+// Patterns //
+// namespace: p-
+// Is a combination of components but in a way that is NOT scaleable.
+// Think Header or Footer. (the header cannot be used in the content or sidebar area) and also contains other components.
+@import "6-patterns/__pattern-index";
+
+// Scopes //
+// Only use the scope if it’s absolutely necessary.
+// Namespace: s- is to give us the highest specificity
+// so we can overwrite any styles for a specific purpose.
+//@import '8-scopes/__scope-index';
+
+// Utils //
+// Namespace: u-
+// Sometimes you may want to make changes only for a certain style in a specific place. In that case, utility classes can help us update it without changing the whole CSS structure.
+@import "9-utils/__util-index";

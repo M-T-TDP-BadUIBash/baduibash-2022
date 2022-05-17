@@ -1,0 +1,21 @@
+// // Badge is WTC only
+// $badgeBackgroundColor: transparent;
+// $badgeBorderRadius: 4px;
+// $badgeBorderSize: 1px;
+// $badgeBorderStyle: solid;
+// $badgeFontColor: $colorPrimaryBase;
+// $badgeFontSize: $typeScaleXSmall;
+// $badgeHeight: 28px;
+// $badgeMargin: 0;
+// $badgeWidth: auto;
+// $badgeActiveBorderColor: none; //Not sure about this
+// $badgePendingBorderColor: none;
+// $badgeInformationalBorderColor: $colorGrayscaleGrayBase;
+// $badgeTextTransformation: uppercase;
+// $badgeFontWeight: $typeFontWeightMedium;
+// $badgePadding: 6px 12px;
+
+// @if $isWTC {
+//   $badgeActiveBorderColor: $colorSemanticGreenBase;
+//   $badgePendingBorderColor: $colorSecondaryLight;
+// }

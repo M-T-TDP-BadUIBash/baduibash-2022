@@ -1,0 +1,66 @@
+// Change with caution, these are used throughout multiple instances. 
+// Alter only if you are certain that the change should cascade to all instances within all components and elements.
+// Most edits to prototypes should be extending by adding variations rather than altering current code
+
+// Create a prototype for generic headline styles.
+@mixin proto-title() {
+    border: $titleBorder;
+    @include prefixer(box-sizing, border-box);
+    color: $titleColor;
+    display: $titleDisplay;
+    font-family: quote($titleFontFamily), Helvetica, Arial, sans-serif;
+    font-style: $titleFontStyle;
+    font-variant: $titleFontVariant;
+    isolation: $titleIsolation;
+    letter-spacing: $titleLetterSpacing;
+    margin: $titleMargin;
+    margin-block-end: $titleMarginBlockEnd;
+    margin-block-start: $titleMarginBlockStart;
+    margin-inline-end: $titleMarginInlineEnd;
+    margin-inline-start: $titleMarginInlineStart;
+    overflow: $titleOverflow;
+    padding: $titlePadding;
+    text-align: $titleTextAlign;
+    text-decoration: $titleTextDecoration;
+    text-justify: $titleTextJustify;
+    text-overflow: $titleTextOverflow;
+    text-rendering: $titleTextRendering;
+    text-transform: $titleTextTransform;
+    text-shadow: $titleTextShadow;
+    vertical-align: $titleVerticalAlign;
+    word-break: $titleWordBreak;
+    word-wrap: $titleWordWrap;
+    writing-mode: $titleWritingMode;
+}
+
+// Extend proto header to be used in different instances
+
+@mixin proto-title-1() {
+    @include proto-title();
+    font-size: $titleOneSize;
+    font-weight: $titleOneWeight;
+    line-height: $titleOneLineHeight;
+    letter-spacing: $titleOneLetterSpacing;
+}
+@mixin proto-title-2() {
+    @include proto-title();
+    font-size: $titleTwoSize;
+    font-weight: $titleTwoWeight;
+    line-height: $titleTwoLineHeight;
+    letter-spacing: $titleTwoLetterSpacing;
+}
+@mixin proto-title-3() {
+    @include proto-title();
+    font-size: $titleThreeSize;
+    font-weight: $titleThreeWeight;
+    line-height: $titleThreeLineHeight;
+    letter-spacing: $titleThreeLetterSpacing;
+}
+@mixin proto-title-4() {
+    @include proto-title();
+    font-size: $titleFourSize;
+    font-weight: $titleFourWeight;
+    line-height: $titleFourLineHeight;
+    text-transform: $titleFourTextTransform;
+    letter-spacing: $titleFourLetterSpacing;
+}

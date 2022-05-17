@@ -1,0 +1,482 @@
+
+// Modal Pattern Instantiation
+@if $isMTB == true {
+    .p-modal {
+        background-color: $colorWhite;
+        border-radius: $modalBorderRadius;
+        @include prefixer(box-sizing, border-box);
+        @include flexbox();
+        flex-direction: column;
+        max-height: $modalMaxHeight;
+        width: $modalWidth;
+
+        &__overlay {
+            @include proto-overlay($modalOverlayBackgroundColor,$modalOverlayZIndex);
+        }
+
+        &__header {
+            border-bottom: $modalHeaderBorderSize $modalHeaderBorderStyle $modalHeaderBorderColor;
+            @include prefixer(box-sizing, border-box);
+            color: $modalFontColor;
+            margin-bottom: $modalHeaderMarginBottom;
+            padding: $modalHeaderPadding;
+            padding-bottom: $modalHeaderPaddingBottom;
+
+            &-title {
+                border: $modalTitleBorder;
+                @include prefixer(box-sizing, border-box);
+                color: $modalHeaderTitleFontColor;
+                display: block;
+                font-family: quote($modalTitleFontFamily), Helvetica, Arial, sans-serif;
+                font-size: $modalHeaderTitleFontSize;
+                font-style: $modalTitleFontStyle;
+                font-variant: normal;
+                font-weight: $modalTitleFontWeight;
+                isolation: isolate;
+                letter-spacing: $modalHeaderTitleLetterSpacing;
+                line-height: $modalTitleLineHeight;
+                margin: $modalTitleMargin;
+                margin-block-end: $modalTitleMargin;
+                margin-block-start: $modalTitleMargin;
+                margin-inline-end: $modalTitleMargin;
+                margin-inline-start: $modalTitleMargin;
+                margin-bottom: $modalHeaderTitleMarginBottom;
+                overflow: $modalHeaderTitleOverflow;
+                padding: $modalTitlePadding;
+                text-align: left;
+                text-decoration: none;
+                text-justify: none;
+                text-overflow: $modalHeaderTitleTextOverflow;
+                text-rendering: optimizeLegibility;
+                text-transform: none;
+                text-shadow: none;
+                vertical-align: middle;
+                word-break: keep-all;
+                word-wrap: break-word;
+                writing-mode: horizontal-tb;
+            }
+
+            &-sub-title {
+                color: $modalSubTitleColor;
+                font-family: quote($modalTitleFontFamily), Helvetica, Arial, sans-serif;
+                font-size: $modalSubTitleFontSize;
+                margin: $modalSubTitleMargin;
+                line-height: $modalSubTitleLineHeight;
+            }
+        }
+
+        &__close-bar {
+            @include prefixer(box-sizing, border-box);
+            box-shadow: 0 0 white;
+            border-bottom: $modalHeaderBorderSize $modalHeaderBorderStyle $modalHeaderBorderColor;
+            display: flex;
+            align-items: center;
+            height: auto;
+            max-height: 600px;
+            min-height: 80px;
+            padding: $modalCloseBarPadding; //padding-top/bottom is height of button + 16px spacing on both sides all divided by 2. padding-right is button size + spacing medium. Both are used to center the title horizontally and vertically
+            position: relative;
+            transition: all .3s ease-in-out;
+            
+
+            &-button {
+                background-color: transparent;
+                border: $modalCloseBarButtonBorder;
+                @include flexbox();
+                flex-direction: column;
+                font-style: $modalTitleFontStyle;
+                padding: $modalCloseBarButtonPadding;
+                position: absolute;
+                right: 16px;
+                top: 24px;
+
+                &-icon {
+                    align-self: center;
+                    color: $modalCloseButtonFontColor;
+                    font-size: $modalCloseBarButtonIconFontSize;
+                    cursor: pointer;
+                }
+
+                &-text {
+                    color: $modalCloseButtonFontColor;
+                    font-size: $modalCloseBarButtonFontSize;
+                    cursor: pointer;
+                    margin-top: 4px;
+                }
+            }
+
+            &-title {
+                    border: $modalTitleBorder;
+                    @include prefixer(box-sizing, border-box);
+                    color: $modalCloseBarTitleFontColor;
+                    // display: none;
+                    font-family: quote($modalTitleFontFamily), Helvetica, Arial, sans-serif;
+                    font-size: $modalCloseBarTitleFontSize;
+                    font-style: $modalTitleFontStyle;
+                    font-variant: normal;
+                    font-weight: $modalTitleFontWeight;
+                    isolation: isolate;
+                    letter-spacing: $modalCloseBarTitleLetterSpacing;
+                    line-height: $modalTitleLineHeight;
+                    margin: $modalTitleMargin;
+                    margin-block-end: $modalTitleMargin;
+                    margin-block-start: $modalTitleMargin;
+                    margin-inline-end: $modalTitleMargin;
+                    margin-inline-start: $modalTitleMargin;
+                    overflow: $modalCloseBarTitleOverflow;
+                    opacity: 0;
+                    padding: $modalTitlePadding;
+                    text-align: center;
+                    text-decoration: none;
+                    text-justify: none;
+                    text-overflow: $modalCloseBarTitleTextOverflow;
+                    text-rendering: optimizeLegibility;
+                    text-transform: uppercase;
+                    text-shadow: none;
+                    transition: all .3s ease-in-out;
+                    vertical-align: middle;
+                    width: $modalCloseBarTitleWidth;
+                    word-break: keep-all;
+                    word-wrap: break-word;
+                    white-space: $modalCloseBarTitleWhiteSpace;
+                    writing-mode: horizontal-tb;
+
+                    &--visible {
+                        opacity: 1;
+                    }
+            }
+
+            &--sticky {
+                box-shadow: 0 2px 4px rgba($colorBlack, .10), 0 4px 8px rgba($colorBlack, .10);
+            }
+        }
+
+        &__footer {
+            align-items: center;
+            @include prefixer(box-sizing, border-box);
+            color: $modalFooterFontColor;
+            display: flex;
+            padding: $modalFooterPadding;
+            transition: all .3s ease-in-out;
+            border-top: $modalHeaderBorderSize $modalHeaderBorderStyle $modalHeaderBorderColor;
+
+            // applied when the modal content is capable of scrolling
+            &--sticky {
+                box-shadow: 0 -2px 4px rgba($colorBlack, .10), 0 -4px 8px rgba($colorBlack, .10);
+            }
+        }
+
+        &__button {
+                @include proto-button();
+                margin: $modalButtonMargin;
+
+                &--loading {
+                    @include proto-button();
+                    font-size: $modalButtonLoadingFontSize; // Removes space between dots
+                    @include dots-loading($modalButtonLoadingColor);
+
+                    &:hover {
+                        cursor: wait;
+                    }
+                }
+
+                // Primary button styles - This is the main call to action on the modal
+                &--primary {
+                    @include proto-button--primary();
+                    margin: $modalButtonMargin;
+
+                    &--loading {
+                        @include proto-button--primary();
+                        font-size: $modalButtonLoadingFontSize; // Removes space between dots        
+                        @include dots-loading($modalPrimaryButtonLoadingColor);
+
+                        &:hover {
+                            cursor: wait;
+                        }
+                    }
+                }
+            }
+
+        &__content {
+            @include prefixer(box-sizing, border-box);
+            color: $modalFontColor;
+            overflow-y: auto;
+            padding: $modalContentPadding;
+            width: $modalContentWidth;
+        }
+        // &:not([data-scroll='0']) {
+        //     .p-modal__close-bar {
+        //         transition: all .3s ease-in-out;
+        //         box-shadow: $modalScrollBoxShadowSize $modalShadowColor;
+        //     }
+        //     .p-modal__close-bar-title {
+        //         // display: inline-block;
+        //         opacity: 1;
+        //         transition: all .3s ease-in-out;
+        //     }
+        // }
+        // &:not([data-scroll-done='true']) {
+        //     .p-modal__footer {
+        //         box-shadow: $modalFooterBoxShadowSize $modalShadowColor;
+        //     }
+        // }
+    }
+    @media only screen and (max-width: $breakpoint--small) {
+        .p-modal {
+            height: $modalMobileHeight;
+            max-height: $modalMobileMaxHeight;
+            width: $modalMobileWidth;
+
+            &__overlay {
+                background-color: $modalMobileOverlayBackgroundColor;
+            }
+
+            &__content {
+                height: $modalMobileContentHeight;
+            }
+
+            &__close-bar {
+                padding: $modalMobileCloseBarPadding;
+
+                &-title {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+//wilmington modal
+@if $isWTC == true {
+    .p-modal {
+        background-color: $colorGrayscaleWhite;
+        border-radius: $modalBorderRadius;
+        @include prefixer(box-sizing, border-box);
+        @include flexbox();
+        flex-direction: column;
+        max-height: $modalMaxHeight;
+        width: $modalWidth;
+        font-family: $typeFontFamily;
+        margin:  $modalMargin; 
+        max-width: $modalMaxWidth;       
+
+        &__overlay {
+            align-items: center;
+            background-color: $modalOverlayBackgroundColor;
+            bottom: 0;
+            @include flexbox();
+            flex-direction: column;
+            justify-content: flex-start;
+            left: 0;
+            overflow: auto;
+            position: fixed;
+            right: 0;
+            top: 0;
+            z-index: $modalOverlayZIndex;
+        }
+
+        &__close-bar {
+            @include prefixer(box-sizing, border-box);
+            background-color: $modalCloseBarBackgroundColor;
+            border-radius: $modalCloseBarBorderRadius;
+            padding: $modalCloseBarPadding; 
+            position: relative;           
+
+            &-button {
+                background-color: transparent;
+                border: $modalCloseBarButtonBorder;
+                @include flexbox();
+                flex-direction: column;
+                font-style: $modalTitleFontStyle;
+                padding: $modalCloseBarButtonPadding;
+                position: absolute;
+                right: 24px;
+                top: 22px;
+
+                &-icon {
+                    align-self: center;
+                    color: $modalCloseButtonFontColor;
+                    font-size: $modalCloseBarButtonIconFontSize;
+                    cursor: pointer;
+                }                
+            }
+
+            &-title {
+                    border: $modalTitleBorder;
+                    @include prefixer(box-sizing, border-box);
+                    color: $modalCloseBarTitleFontColor;
+                    font-family: quote($modalTitleFontFamily), Helvetica, Arial, sans-serif;
+                    font-size: $modalCloseBarTitleFontSize;
+                    font-style: $modalTitleFontStyle;
+                    font-variant: normal;
+                    font-weight: $modalTitleFontWeight;
+                    isolation: isolate;
+                    letter-spacing: $modalCloseBarTitleLetterSpacing;
+                    line-height: $modalTitleLineHeight;
+                    margin: $modalTitleMargin;
+                    margin-block-end: $modalTitleMargin;
+                    margin-block-start: $modalTitleMargin;
+                    margin-inline-end: $modalTitleMargin;
+                    margin-inline-start: $modalTitleMargin;
+                    overflow: $modalCloseBarTitleOverflow;
+                    padding: $modalTitlePadding;
+                    text-align: left;
+                    text-decoration: none;
+                    text-justify: none;
+                    text-overflow: $modalCloseBarTitleTextOverflow;
+                    text-rendering: optimizeLegibility;
+                    text-transform: none;
+                    text-shadow: none;
+                    vertical-align: baseline;
+                    width: $modalCloseBarTitleWidth;
+                    word-break: keep-all;
+                    word-wrap: break-word;
+                    white-space: $modalCloseBarTitleWhiteSpace;
+                    writing-mode: horizontal-tb;
+            }
+            
+            &--scroll {
+                box-shadow: $modalScrollBoxShadowSize $modalShadowColor;
+            }            
+        }
+
+        &__sub-title {
+            padding: $modalSubTitlePadding;           
+            box-shadow: $modalScrollBoxShadowSize $modalShadowColor;
+            color: $modalSubTitleColor;
+            font-size: $modalSubTitleFontSize;
+            font-weight: $typeFontWeightRegular;
+            font-family: $typeFontFamily;
+        }
+        
+        &__footer {
+            align-items: center;
+            @include prefixer(box-sizing, border-box);
+            @include flexbox();
+            padding: $modalFooterPadding;
+            justify-content: flex-end;
+            border-radius: $modalFooterBorderRadius;
+
+            //applied when the modal content is capable of scrolling
+            &--shadow {
+                box-shadow: $modalFooterBoxShadowSize $modalShadowColor;
+            }
+        }        
+
+        &__button {
+                @include proto-button();
+                margin: $modalButtonMargin;
+                width: $modalButtonWidth;
+
+                &--loading {
+                    @include proto-button();
+                    font-size: $modalButtonLoadingFontSize; // Removes space between dots
+                    @include dots-loading($modalButtonLoadingColor);
+
+                    &:hover {
+                        cursor: wait;
+                    }
+                }
+
+                // Primary button styles - This is the main call to action on the modal
+                &--primary {
+                    @include proto-button--primary();
+                    margin: $modalButtonMargin;
+                    margin-right: 0;
+                    width: $modalButtonWidth;
+
+                    &--loading {
+                        @include proto-button--primary();
+                        font-size: $modalButtonLoadingFontSize; // Removes space between dots        
+                        @include dots-loading($modalPrimaryButtonLoadingColor);
+
+                        &:hover {
+                            cursor: wait;
+                        }
+                    }
+                }
+            }
+
+        &__content {
+            @include prefixer(box-sizing, border-box);
+            color: $modalFontColor;
+            overflow: auto;
+            padding: $modalContentPadding;
+            width: $modalContentWidth; 
+            font-weight: $modalContentFontWeight;
+        }
+
+        &-alert {
+            @extend .p-modal;
+
+            &__close-bar {
+                @include prefixer(box-sizing, border-box);                
+                border-radius: $modalCloseBarBorderRadius;
+                padding: $modalCloseBarPadding; 
+                position: relative;
+            }
+
+            &__content {
+                text-align: center;
+            }
+
+            &__icon {
+                font-size: $modalAlertIconFontSize;
+                display: block;
+                margin-bottom: $modalAlertIconMarginBottom;
+            }
+
+            &__title {
+                font-size: $modalAlertTitleFontSize;
+                text-align: center;
+                color: $modalAlertTitleColor; 
+                margin-bottom: $modalAlertTitleMarginBottom;
+                padding: $modalAlertTitlePadding;
+            }
+
+            &__divider {
+                border: $modalAlertDividerBorder;
+                width: $modalAlertDividerWidth;
+                margin: auto;                
+            }  
+
+            &__text {
+                font-size: $modalAlertTextFontSize;
+                text-align: center;
+                color: $modalAlertTextColor;
+                margin: $modalAlertTextMargin;
+                font-weight: $modalAlertTextFontWeight;
+                padding: $modalTextPadding;
+                line-height: $modalTextLineHeight;
+            }
+        }
+    }  
+    
+    @media only screen and (max-width: $breakpoint--small) {
+        .p-modal {
+            width: $modalMobileWidth;
+
+            &__overlay {
+                padding: $modalOverlayMobilePadding;
+            }
+
+            &__close-bar {
+                padding: $modalMobileCloseBarPadding;                
+            }
+            
+            &__footer {
+                flex-direction: column-reverse;
+            }
+            
+            &__button {
+                margin: $modalButtonMargin;
+                width: 100%;
+                
+                &--primary {
+                    margin: $modalButtonMargin;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

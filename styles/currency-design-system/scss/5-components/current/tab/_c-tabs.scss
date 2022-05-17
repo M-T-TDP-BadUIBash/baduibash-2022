@@ -1,0 +1,135 @@
+@import 'var-tab';
+
+.c-tabs {
+  border-bottom: $tabBorderSize $tabBorderStyle $tabBorderColor;
+  font-size: $tabContainerFontSize;
+  list-style: none;
+  margin: $tabContainerMargin;
+  padding: $tabContainerPadding;
+
+  &__tab {
+    color: $tabFontColor;
+    cursor: $tabCursor;
+    display: $tabDisplayBlock;
+    font-family: $tabFontFamily;
+    font-size: $tabFontSize;
+    font-weight: $tabFontWeight;
+    line-height: $tabLineHeight;
+    margin: $tabMargin;
+    padding: $tabPadding;
+    position: $tabBorderPosition;
+    text-align: $tabTextAlign;
+    text-decoration: $tabTextDecoration;
+    width: auto;
+
+    &:last-child {
+      margin-right: $tabLastChildMarginRight;
+    }
+
+    &--active {
+      @extend .c-tabs__tab;
+      color: $tabActiveColor;
+      border-bottom-color: $tabActiveColor;
+      border-bottom: $tabBorderSize $tabBorderStyle $tabActiveColor;
+      font-weight: $tabActiveFontWeight;
+
+      &:after {
+        width: 0;
+        border-left: (2 * $tabSizing) $tabBorderStyle $tabArrowTransparent;
+        border-right: (2 * $tabSizing) $tabBorderStyle $tabArrowTransparent;
+        border-top: (3 * $tabSizing) $tabBorderStyle $tabActiveColor;
+        left: 50%;
+        margin-left: (-1 * $tabSizing);
+        content: "";
+        height: $tabTriangleHeight;
+        top: $tabTriangleTop;
+        position: $tabArrowPosition;
+        display: $tabDisplay;
+      }
+    }
+  }
+
+  &__content {
+    font-weight: $tabContentFontWeight;
+    margin: $tabContentMargin;
+    padding: $tabContentPadding;
+    display: none;
+
+    &--active {
+        display: block;
+    }
+  }
+
+  &__container {
+    width: 100%;
+    overflow: auto;
+    white-space: nowrap;
+  }
+
+  &__tab-list-container {
+    min-width: $desktopBreakpoint;
+    display: inline-block;
+    border-bottom: 2px solid $colorGrayLight;
+  }
+
+  &__tab-list {
+    list-style: none;
+  }
+
+  &__tab-button:hover {
+    cursor: pointer;
+    color: $tabActiveColor;
+  }
+  @if $isWTC == true {
+    &__tab-button {
+      padding: 0;
+      border: none;
+      background: none;
+      color: $colorSecondaryBlueBase;
+      cursor: pointer;
+      &--selected {
+        color: $tabActiveColor;
+        font-weight: $typeFontWeightBold;
+      }
+    }
+  }
+
+  &__tab-item {
+    display: inline;
+    padding-bottom: 4px;
+    margin: 0 30px;
+    box-sizing: border-box;
+
+    &--selected {
+      position: relative;
+      border-bottom: 2px solid $tabActiveColor;
+      color: $tabActiveColor;
+      font-weight: $typeFontWeightBold;
+
+      &:after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid $tabActiveColor;
+        position: absolute;
+        bottom: -7px;
+        left: calc(50% - 5px);
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $desktopBreakpoint) {
+  .c-tabs {
+    &__tab-list-container {
+      min-width: auto;
+      display: block;
+    }
+
+    &__tab-item {
+      margin: 0 30px;
+    }
+  }
+}

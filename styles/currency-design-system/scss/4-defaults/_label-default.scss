@@ -1,0 +1,13 @@
+label {
+  @include prefixer(box-sizing, border-box);
+  color: $colorGrayDark;
+  display: block;
+  font-family: qupte($labelFontFamily), Arial, Helvetica, sans-serif;
+  font-size: $typeScaleMedium;
+  font-weight: $typeFontWeightLight;
+  margin-bottom: $labelMarginBottom;
+}
+
+@if $isWTC == true {
+  font-weight: $typeFontWeightRegular;
+}

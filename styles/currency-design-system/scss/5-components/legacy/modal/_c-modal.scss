@@ -1,0 +1,184 @@
+.c-modal {
+    @if $isWTC == true {
+      &__container {
+        width: $modalComponentsContainerWidth;
+        max-width: $modalComponentsContainerMaxWidth;
+        background: $colorGrayscaleWhite;
+        border-radius: $modalComponentsContainerBorderRadius;
+        margin: $modalComponentsContainerMargin;
+        box-shadow: 0 $modalComponentsContainerShadowRight $modalComponentsContainerShadowBottom  edi$modalComponentsContainerShadowColor;
+        &--medium {
+          max-width:$modalComponentsContainerMedMaxWidth;
+        }
+        &--large {
+          max-width: $modalComponentsContainerLargeMaxWidth;
+        }
+      }
+
+      &__header {
+        position: relative;
+        padding: 24px;
+        background-color: $colorGrayscaleGrayLighter;
+        border-radius:$modalHeaderBorderRadius;
+          &-text {
+              color: $colorPrimaryBase;
+              font-weight: $typeFontWeightLight;
+              font-family: $typeFontFamily;
+              font-size: 32px;
+              line-height: 36px;
+          }
+      }
+
+      &__body {
+        padding: $modalBodyPaddingHeight $modalBodyPaddingWidth;
+        text-align: center;
+          &-header{
+              font-weight: normal;
+              font-family: $typeFontFamily;
+              color: $colorSecondaryLight;
+              font-size: 44px;
+              line-height: 48px;
+          }
+      }
+
+      &__button-wrapper {
+        padding-top: $modalButtonWrapperPaddingTop;
+      }
+
+      &__button-wrapper-button {
+        @include proto-button();
+          
+        margin: $modalButtonWrapperButtonMargin;
+        font-size: 16px;
+        line-height: 20px;
+        width: 160px;
+        background-color: $buttonSecondaryBackgroundColor;
+        border: $buttonSecondaryBorderWeight $buttonSecondaryBorderStyle $buttonSecondaryBorderColor;
+        color: $buttonSecondaryTextColor;
+
+        &:visited {
+            background-color: $buttonSecondaryBackgroundColor;
+            border: $buttonSecondaryBorderWeight $buttonSecondaryBorderStyle $buttonSecondaryBorderColor;
+            color: $buttonSecondaryTextColor;
+        }
+
+        &:hover {
+            color: $buttonHoverColor;
+            background-color: $buttonSecondaryBackgroundColor;
+            border: $buttonSecondaryBorderWeight $buttonSecondaryBorderStyle $buttonSecondaryBorderColor;
+        }
+
+        &-disabled {
+            background-color: $colorGrayscaleWhite;
+            border: $buttonPrimaryBorderWeight $buttonPrimaryBorderStyle $colorGrayscaleGrayLighter;
+            color: $colorGrayscaleGrayBase;
+
+            &:hover {
+                background-color: $colorGrayscaleWhite;
+                border: $buttonPrimaryBorderWeight $buttonPrimaryBorderStyle $colorGrayscaleGrayLighter;
+                color: $colorGrayscaleGrayBase;
+            }
+        }
+
+          
+          // Primary button styles - This is the main call to action on the page
+        &--primary {
+            @include proto-button();
+            background-color: $buttonPrimaryBackgroundColor;
+            border: $buttonPrimaryBorderWeight $buttonPrimaryBorderStyle $buttonPrimaryBorderColor;
+            color: $buttonPrimaryTextColor;
+            text-decoration: $buttonPrimaryTextStyle;
+            margin: $modalButtonWrapperButtonMargin;
+            font-size: 16px;
+            line-height: 20px;
+            width: 160px;
+
+            &:visited {
+                background-color: $buttonPrimaryBackgroundColor;
+                border: $buttonPrimaryBorderWeight $buttonPrimaryBorderStyle $buttonPrimaryBorderColor;
+                color: $buttonPrimaryTextColor;
+            }
+
+            &:hover {
+                background-color: $buttonHoverColor;
+                border-color: $buttonHoverColor;
+                color: $buttonPrimaryTextColor;
+            
+            }
+            &:active {
+                background-color: darken($buttonPrimaryBackgroundColor, $buttonDarkenValue);
+                border-color: darken($buttonPrimaryBorderColor, $buttonDarkenValue);
+                color: $buttonPrimaryTextColor;
+            }
+
+            &-loading {
+                @include proto-button--primary();
+                background-color: $buttonPrimaryBackgroundColor;
+                border: $buttonPrimaryBorderWeight $buttonPrimaryBorderStyle $buttonPrimaryBorderColor;
+                color: $buttonPrimaryTextColor;
+                text-decoration: $buttonPrimaryTextStyle;
+                margin: $modalButtonWrapperButtonMargin;
+                width: 160px;
+                font-size: 0; // Removes space between dots        
+                @include dots-loading($buttonPrimaryLoadingDotColor);
+
+                &:hover {
+                    cursor: $buttonLoadingCursor;
+                }
+            }
+
+            // T7 Added - Review
+            &-disabled {
+                background-color: $colorGrayscaleGrayBase;
+                border: $buttonPrimaryBorderWeight $buttonPrimaryBorderStyle $colorGrayscaleGrayBase;
+                color: $colorGrayscaleWhite;
+
+                &:hover {
+                    background-color: $colorGrayscaleGrayBase;
+                    color: $colorGrayscaleWhite;
+                    border: $buttonPrimaryBorderWeight $buttonPrimaryBorderStyle $colorGrayscaleGrayBase;
+                }
+            }
+          }
+      }
+
+      &__close-icon {
+        position: absolute;
+        top: $modalCloseIconTop;
+        right: $modalCloseIconRight;
+      }
+
+      &__close-icon-button {
+        width: $modalCloseIconButtonWidth;
+        height: $modalCloseIconButtonHeight;
+        border: none;
+        background: none;
+      }
+
+      &__description {
+        line-height:$modalDescriptionLineHeight;
+      }
+
+      &__footer {
+        overflow: $modalFooterOverflow;
+      }
+    }
+}
+
+// IE only styles
+@media screen and (-ms-high-contrast:active), (-ms-high-contrast: none){
+    @if $isWTC == true {
+      .c-modal {
+        &__footer {
+          height: $modalMediaFooterHeight;
+        }
+      }
+      @media only screen and (min-width: $desktopBreakpoint) {
+        .c-modal {
+          &__footer {
+            height: $modalMediaFooterHeight;
+          }
+        }
+      }
+    }
+}

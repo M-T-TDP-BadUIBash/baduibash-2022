@@ -1,0 +1,40 @@
+$dateSelectBorderColor: $colorGrayLight;
+$dateSelectIconFill: $colorGrayDarker;
+$dateSelectIconColor: $colorPrimaryBase;
+$dateAlignItems: stretch;
+$dateBorderSize: 1px;
+$dateBorderStyle: solid;
+$dateBorderRadius: 2px;
+$dateDisplay: flex;
+$dateWidth: 100%;
+$dateIconAlignSelf: center;
+$dateIconMargin: 0 auto;
+$dateIconContainerBorderRadius: 1px 0 0 1px;
+$dateIconContainerDisplay: flex;
+$dateIconPadding: 0;
+$dateIconTextAlign: center;
+$dateIconContainerWidth: 44px;
+$dateSelectBorderRadius: 0;
+$dateSelectBorderTop: none;
+$dateSelectBorderBottom: none;
+$dateSelectBorderLeft: none;
+$dateSelectFlexGrow: 1;
+$dateSelectWidth: auto;
+$dateSelectLastChildBorderRadius: 0 1px 1px 0;
+$dateSelectLastChildBorder: none;
+$dateSelectContainerBackgroundColor: $colorWhite;
+$dateSelectIconMargin: 10px;
+$dateSelectIconFontSize: 1.5em;
+$dateSelectIconContainerDisplayMobile: none;
+$dateSelectMonthPaddingRight: 20px;
+$dateSelectMonthBorderRadius: 5px 0 0 5px;
+// $dateSelectFocusBoxShadow: $focusBoxShadow;
+
+@if $isWTC {
+    $dateSelectBorderColor: $colorGrayscaleGrayBase;
+    $dateBorderRadius: 4px;
+    $dateIconContainerBorderRadius: 4px 0 0 4px;
+    $dateSelectLastChildBorderRadius: 0 4px 4px 0;
+}
+
+

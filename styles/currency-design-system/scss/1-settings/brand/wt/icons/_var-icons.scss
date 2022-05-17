@@ -1,0 +1,367 @@
+@function unicode($str) {
+    @return unquote("\"\\#{$str}\"");
+  } 
+$icon--zoom-out: unicode(ea02);
+$icon--bar-graph: unicode(ea03);
+$icon--audit-log: unicode(ea04);
+$icon--zoom-in: unicode(ea05);
+$icon--user: unicode(ea06);
+$icon--wifi-on: unicode(ea07);
+$icon--wifi-off: unicode(ea08);
+//renamed was called warning
+$icon--exclamation: unicode(ea09);
+$icon--plus: unicode(ea0a);
+$icon--utility-menu: unicode(ea0b);
+$icon--down: unicode(ea0c);
+$icon--browser: unicode(ea0d);
+$icon--delete: unicode(ea0e);
+$icon--up: unicode(ea0f);
+$icon--success: unicode(ea10);
+$icon--show: unicode(ea11);
+$icon--settings: unicode(ea12);
+$icon--security: unicode(ea13);
+$icon--search: unicode(ea14);
+$icon--right-arrow: unicode(ea15);
+$icon--reset: unicode(ea16);
+$icon--print: unicode(ea17);
+$icon--positive: unicode(ea18);
+$icon--contacts: unicode(ea19);
+$icon--phone: unicode(ea1a);
+$icon--password: unicode(ea1b);
+$icon--open: unicode(ea1c);
+$icon--notes: unicode(ea1d);
+$icon--negative: unicode(ea1e);
+$icon--more-actions: unicode(ea1f);
+$icon--monitor: unicode(ea20);
+$icon--meter: unicode(ea21);
+$icon--mail: unicode(ea22);
+$icon--location: unicode(ea23);
+$icon--left-arrow: unicode(ea24);
+$icon--last-page: unicode(ea25);
+$icon--institution: unicode(ea26);
+$icon--info: unicode(ea27);
+$icon--identity-verification: unicode(ea28);
+$icon--home: unicode(ea29);
+$icon--holdings: unicode(ea2a);
+$icon--history: unicode(ea2b);
+$icon--hide: unicode(ea2c);
+$icon--help: unicode(ea2d);
+$icon--full-screen: unicode(ea2e);
+$icon--folder: unicode(ea2f);
+$icon--first-page: unicode(ea30);
+$icon--filter: unicode(ea31);
+$icon--files: unicode(ea32);
+$icon--favorite-outline: unicode(ea33);
+$icon--favorite-filled: unicode(ea44);
+$icon--export: unicode(ea34);
+$icon--error: unicode(ea35);
+$icon--elligible-securities: unicode(ea36);
+$icon--edit: unicode(ea37);
+$icon--dropdown-open: unicode(ea38);
+$icon--dropdown-closed: unicode(ea39);
+$icon--download: unicode(ea3a);
+$icon--complete: unicode(ea3b);
+$icon--close: unicode(ea3c);
+$icon--clock: unicode(ea3d);
+$icon--client-hierarchy: unicode(ea3e);
+$icon--chat: unicode(ea3f);
+$icon--chart: unicode(ea40);
+$icon--calendar: unicode(ea41);
+$icon--alert: unicode(ea42);
+$icon--add: unicode(ea43);
+$icon--upload: unicode(ea45);
+$icon--lists: unicode(ea46);
+
+.icon {
+display: inline-block;
+font: normal normal normal 1em/1 'wtc';
+speak: none;
+text-transform: none;
+// Better Font Rendering
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+.icon--zoom-out::before {
+content: $icon--zoom-out;
+}
+
+.icon--bar-graph::before {
+content: $icon--bar-graph;
+}
+
+.icon--audit-log::before {
+content: $icon--audit-log;
+}
+
+.icon--zoom-in::before {
+content: $icon--zoom-in;
+}
+
+.icon--user::before {
+content: $icon--user;
+}
+
+.icon--wifi-on::before {
+content: $icon--wifi-on;
+}
+
+.icon--wifi-off::before {
+content: $icon--wifi-off;
+}
+
+//renamed was called warning
+.icon--exclamation::before {
+content: $icon--exclamation;
+}
+
+.icon--plus::before {
+content: $icon--plus;
+}
+
+.icon--utility-menu::before {
+content: $icon--utility-menu;
+}
+
+.icon--down::before {
+content: $icon--down;
+}
+
+.icon--browser::before {
+content: $icon--browser;
+}
+
+.icon--delete::before {
+content: $icon--delete;
+}
+
+.icon--up::before {
+content: $icon--up;
+}
+
+.icon--success::before {
+content: $icon--success;
+}
+
+.icon--show::before {
+content: $icon--show;
+}
+
+.icon--settings::before {
+content: $icon--settings;
+}
+
+.icon--security::before {
+content: $icon--security;
+}
+
+.icon--search::before {
+content: $icon--search;
+}
+
+.icon--right-arrow::before {
+content: $icon--right-arrow;
+}
+
+.icon--reset::before {
+content: $icon--reset;
+}
+
+.icon--print::before {
+content: $icon--print;
+}
+
+.icon--positive::before {
+content: $icon--positive;
+}
+
+.icon--contacts::before {
+content: $icon--contacts;
+}
+
+.icon--phone::before {
+content: $icon--phone;
+}
+
+.icon--password::before {
+content: $icon--password;
+}
+
+.icon--open::before {
+content: $icon--open;
+}
+
+.icon--notes::before {
+content: $icon--notes;
+}
+
+.icon--negative::before {
+content: $icon--negative;
+}
+
+.icon--more-actions::before {
+content: $icon--more-actions;
+}
+
+.icon--monitor::before {
+content: $icon--monitor;
+}
+
+.icon--meter::before {
+content: $icon--meter;
+}
+
+.icon--mail::before {
+content: $icon--mail;
+}
+
+.icon--location::before {
+content: $icon--location;
+}
+
+.icon--left-arrow::before {
+content: $icon--left-arrow;
+}
+
+.icon--last-page::before {
+content: $icon--last-page;
+}
+
+.icon--institution::before {
+content: $icon--institution;
+}
+
+.icon--info::before {
+content: $icon--info;
+}
+
+.icon--identity-verification::before {
+content: $icon--identity-verification;
+}
+
+.icon--home::before {
+content: $icon--home;
+}
+
+.icon--holdings::before {
+content: $icon--holdings;
+}
+
+.icon--history::before {
+content: $icon--history;
+}
+
+.icon--hide::before {
+content: $icon--hide;
+}
+
+.icon--help::before {
+content: $icon--help;
+}
+
+.icon--full-screen::before {
+content: $icon--full-screen;
+}
+
+.icon--folder::before {
+content: $icon--folder;
+}
+
+.icon--first-page::before {
+content: $icon--first-page;
+}
+
+.icon--filter::before {
+content: $icon--filter;
+}
+
+.icon--files::before {
+content: $icon--files;
+}
+
+.icon--favorite-outline::before {
+content: $icon--favorite-outline;
+}
+
+.icon--favorite-filled::before {
+  content: $icon--favorite-filled;
+  }
+
+.icon--export::before {
+content: $icon--export;
+}
+
+.icon--error::before {
+content: $icon--error;
+}
+
+.icon--elligible-securities::before {
+content: $icon--elligible-securities;
+}
+
+.icon--edit::before {
+content: $icon--edit;
+}
+
+.icon--dropdown-open::before {
+content: $icon--dropdown-open;
+}
+
+.icon--dropdown-closed::before {
+content: $icon--dropdown-closed;
+}
+
+.icon--download::before {
+content: $icon--download;
+}
+
+.icon--complete::before {
+content: $icon--complete;
+}
+
+.icon--close::before {
+content: $icon--close;
+}
+
+.icon--clock::before {
+content: $icon--clock;
+}
+
+.icon--client-hierarchy::before {
+content: $icon--client-hierarchy;
+}
+
+.icon--chat::before {
+content: $icon--chat;
+}
+
+.icon--chart::before {
+content: $icon--chart;
+}
+
+.icon--calendar::before {
+content: $icon--calendar;
+}
+
+.icon--alert::before {
+content: $icon--alert;
+}
+
+.icon--add::before {
+content: $icon--add;
+}
+
+.icon--upload::before {
+  content: $icon--upload;
+}
+
+.icon--lists::before {
+  content: $icon--lists;
+}
+
+
+// Icon sizes
+$smallIcon: systemTheme(icons, smallIcon);
+$mediumIcon: systemTheme(icons, mediumIcon);
+$largeIcon: systemTheme(icons, largeIcon);
+$extraLargeIcon: systemTheme(icons, extraLargeIcon);

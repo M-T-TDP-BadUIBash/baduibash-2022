@@ -1,0 +1,54 @@
+// Change with caution, these are used throughout multiple instances.
+// Alter only if you are certain that the change should cascade to all instances within all components and elements.
+// Most edits to prototypes should be extending by adding variations rather than altering current code
+
+// Removed $tooltipBackgroundColor $tooltipFontSize and addedd to each brand
+
+@import 'var-tooltip';
+
+$tooltipTextColor: $colorWhite;
+$tooltipArrowSize: 10px;
+
+
+@mixin proto-tooltip() {
+  background: $tooltipBackgroundColor;
+  @include prefixer(border-radius, 4px);
+  box-shadow: $tooltipShadow;
+  color: $tooltipTextColor;
+  display: inline-block;
+  margin: $spacingLarge;
+  max-width: 335px;
+  padding: $spacingLarge;
+  position: relative;
+  font-family: $fontFace;
+
+  &:after {
+    //Create an arrow
+    background: $tooltipBackgroundColor;
+    border-left: 2px solid $tooltipBackgroundColor;
+    border-bottom: 2px solid $tooltipBackgroundColor;
+    box-shadow: $tooltipShadow;
+    content: "";
+    display: block;
+    height: $tooltipArrowSize;
+    position: absolute;
+    transform: rotate(45deg);
+    width: $tooltipArrowSize;
+    z-index: 10;
+  }
+
+  &__content {
+    font-size: $tooltipFontSize;
+    line-height: $tooltipFontSize + 6;
+    font-weight: $tooltipContentFontWeight;
+    color: $tooltipContentColor;
+
+    p {
+      font-size: $tooltipFontSize;
+      line-height: $tooltipContentParagraphLineHeight;
+      margin: $tooltipContentParagraphMargin;
+      font-weight: $tooltipContentParagraphFontWeight;
+      color: $tooltipContentParagraphColor;  
+    }
+  }
+}

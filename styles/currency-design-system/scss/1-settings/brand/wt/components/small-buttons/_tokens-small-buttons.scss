@@ -1,0 +1,13 @@
+$wt-small-button-tokens: (
+    smallButtonBorderRadius: 16px,
+    smallButtonFontSize: $typeScaleXSmall,
+    smallButtonChangeHueValue: 5%,
+    smallButtonHeight: 30px,
+    smallButtonWidth: 100%,
+    smallButtonDisplay: inline-block,
+    smallButtonVerticalAlign: top,
+    smallButtonMargin: 0,
+    smallButtonLetterSpacing: 0.5px,
+    smallButtonDisabledFontColor: $colorGrayscaleWhite,
+    loadingPrimaryButtonDotColor: $colorGrayscaleWhite
+  );

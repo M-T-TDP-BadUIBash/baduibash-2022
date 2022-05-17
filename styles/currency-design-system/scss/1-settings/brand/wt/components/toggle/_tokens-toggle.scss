@@ -1,0 +1,14 @@
+$wt-toggle-tokens: (
+    toggleContainerBorderBottomColor: #e0e9ed,
+    toggleContainerBorderSize: 2px,
+    toggleContainerColor: $colorSecondaryBlueBase,
+    toggleContentTop: 2px,
+    toggleSectionColor: $colorSecondaryBase,
+    toggleSectionPaddingBottom: 6px,
+    toggleSelectedBorderColor: $colorSecondaryBase,
+    toggleSelectedBorderSize: 5px,
+    toggleSelectedBottom: -7px,
+    toggleSelectedLeft: 5px,
+    subToggleBorderRight: 1px,
+    toggleFontWeight: $typeFontWeightBold
+  );

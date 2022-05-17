@@ -1,0 +1,16 @@
+@mixin proto-menu() {
+    background-color: $menuBackgroundColor;
+    padding: 0 $menuPadding;
+    height: $menuPatternHeight;
+    text-align: center;
+    display: flex;
+  }
+
+@mixin proto-menuLink() {
+    list-style: none;
+    margin: $menuLinkMargin;
+    color: $menuTextColor;
+    font-family: quote($typeFontFamily), Helvetica, Arial, sans-serif;
+    font-weight: $menuFontWeight;
+    font-size: $menuFontSize;
+  }

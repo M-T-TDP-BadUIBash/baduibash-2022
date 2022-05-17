@@ -1,0 +1,12 @@
+@import "var-container";
+
+@mixin proto-container()  {
+  border: $containerBorderSize $containerBorderStyle $containerBorderColor;
+  @include prefixer(border-radius, $containerBorderRadius);
+  display: $containerDisplay;
+  padding: $containerPadding;
+  width: $containerWidth;
+  //&:not(:last-child) {
+  //  border-bottom: none;
+  //}
+}

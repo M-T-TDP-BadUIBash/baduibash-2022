@@ -1,0 +1,20 @@
+@mixin proto-badge {
+  border-radius: $badgeBorderRadius;
+  @include prefixer(box-sizing, border-box);
+  color: $badgeFontColor;
+  display: inline-block;
+  font-size: $badgeFontSize;
+  height: $badgeHeight;
+  line-height: $badgeLineHeight;
+  margin: $badgeMargin;
+  width: $badgeWidth;
+  padding: $badgePadding;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: top;
+  text-transform: $badgeTextTransformation;
+  font-weight: $badgeFontWeight;
+  background-color: $badgeBackgroundColor;
+  font-family: $badgeFontFamily;
+  letter-spacing: $badgeLetterSpacing;
+}

@@ -1,0 +1,7 @@
+.c-link {
+  @include proto-link($linkFontColor, $linkFontSize);
+
+  &--inherit {
+    @include proto-link($linkFontColor, $linkFontSizeInherit);
+  }
+}

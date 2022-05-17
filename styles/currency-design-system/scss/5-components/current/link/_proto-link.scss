@@ -1,0 +1,39 @@
+@mixin proto-link($_color, $_size) {
+  @include prefixer(box-sizing, border-box);
+  background-color: transparent;
+  border: 0;
+  color: $_color;
+  cursor: pointer;
+  display: inline-block;
+  font-family: quote($linkFontFamily), Arial, sans-serif;;
+  font-size: $_size;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: $linkFontWeight;
+  letter-spacing: inherit;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  text-decoration: $linkTextDecoration;
+  text-decoration-style: $linkTextDecorationStyle;
+  text-transform: none;
+  vertical-align: baseline;
+
+  &:hover {
+    color: darken($_color, 5%);
+    text-decoration: $linkHoverTextDecoration;
+    text-decoration-style: $linkHoverTextDecorationStyle;
+  }
+}
+
+@mixin proto-icon-link($_color, $_fontSize, $_iconSize, $_offset) {
+    @include proto-link($_color, $_fontSize);
+    .c-icon-link__icon {
+        color: $_color;
+        margin-right: $_offset;
+        position: relative;
+        top: $_offset;
+        font-size: $_iconSize;
+    }
+}

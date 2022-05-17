@@ -1,0 +1,64 @@
+$headerBackgroundColor: linear-gradient(135deg, #18864a, $colorPrimaryBase);
+$headerWidth: 100%;
+$headerHeight: 74px;
+$headerLogoHeight: 24px;
+
+$headerMenuPadding: 0 0 0 32px; 
+$headerMenuItemBackground: transparent;
+$headerMenuItemColor: $colorWhite;
+$headerMenuItemColorHover: $colorWhite;
+$headerMenuItemFont:  $typeFontFamily;
+$headerMenuItemFontSize: $typeScaleMedium;
+$headerMenuItemPadding: 0;
+$headerMenuItemMargin: 0 $spacingLarge;
+$headerMenuItemLineColor: none;
+$headerMenuItemLineHeight: 4px;
+$headerMenuItemLineWidth: 100%;
+$headerMenuItemOrigin: left;
+$headerMenuItemPositionBtm: 0;
+$headerMenuItemPositionLft: 0;
+$headerMenuItemTextMargin: $spacingXSmall;
+
+$headerSubmenuBackground: $colorWhite;
+$headerSubmenuBackgroundResponsive: $colorWhite;
+$headerSubmenuColor: $colorBlack;
+$headerSubmenuFontWeight: 100;
+$headerSubmenuLinkWidth: auto;
+
+$headerSubmenuTopBorderColor: $colorGrayLighter;
+$headerResponsiveLinkColor: $colorPrimaryBase;
+$headerResponsiveLinkColorHover: $colorGrayDarker;
+
+
+@if $isMTB {
+    $headerMenuItemLineColor: $colorYellowBase;
+}
+
+@if $isWTC {
+    $headerBackgroundColor: $colorPrimaryBase;
+    $headerHeight: 59px;
+    $headerLogoPosition: left;
+    $headerLogoHeight: 31px;
+    $headerMenuPadding: 0;
+    $headerMenuItemBackground: $colorGrayLightest;
+    $headerMenuItemColorHover: $colorSecondaryBase;
+    $headerMenuItemFontSize: $typeScaleSmall;
+    $headerMenuItemPadding: 0 $spacingLarge;
+    $headerMenuItemMargin: 0;
+    $headerMenuItemLineColor: none;
+    $headerMenuItemLineHeight: 2px;
+    $headerMenuItemLineWidth: calc(100% - 48px);
+    $headerMenuItemOrigin: center;
+    $headerMenuItemPositionBtm: 15px; 
+    $headerMenuItemPositionLft: 24px;
+    $headerMenuItemTextMargin: 0;
+
+    $headerSubmenuBackground: $colorPrimaryBase;
+    $headerSubmenuColor: $colorGrayscaleWhite;
+    $headerSubmenuFontWeight: 300;
+    $headerSubmenuLinkWidth: 100%;
+
+    $headerSubmenuTopBorderColor: $colorPrimaryLight;
+    $headerResponsiveLinkColorHover: $colorSecondaryBase;
+}
+

@@ -1,0 +1,14 @@
+.u-screen-reader {
+  height: 1px;
+  left: -10000px;
+  position: absolute;
+  top: auto;
+  overflow: hidden;
+  width: 1px;
+}
+
+// Using CSS to move hidden elements to a position off-screen is generally accepted as an accessible method of hiding content visually. The following are the recommended styles for visually hiding content that will be read by a screen reader.
+
+// The .hidden CSS class should then be referenced from within the tag of the element being hidden, as shown:
+
+// Sighted users will not see the hidden content at all. It will be out of their viewing range - hidden well to the left of the visible browser window. Screen reader users will have access to the content as if it were not hidden at all. Screen readers read the content normally, completely ignoring the styles used in this technique.

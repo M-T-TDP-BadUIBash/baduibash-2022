@@ -1,0 +1,15 @@
+@import 'prefixer', // Mixin that creates browser prefixes for each client
+        'flexbox', // Mixin that renders flexbox properties for each client
+        'justify-content', // Mixin that renders prexfixs for justify content, need to pass in the propery value
+        'flex-align', // Mixin that creates flexbox alignment
+        'placeholder', //Mixin that creates browser placeholder values for each client
+        'prototypes/__proto-index', // Component Prototypes to be referenced in c- level classes.
+        'animations/__animations-index', // Library of available animations
+        'animate',  // Mixin that allows user to create cross browser animation in one line.
+        'visually-hidden',  // Mixin that hides content off the screen. Typically used for screen readers
+        'dots-loading', // Mixin for animated loading dots       
+        'reset-box',
+        'reset-type',
+        'web-outline-focus',
+        'icons',
+        'fit-content'; // Mixin that renders the prefixes for the value of fit-content.  Pass in the property.

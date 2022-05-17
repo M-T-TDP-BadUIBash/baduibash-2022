@@ -1,0 +1,7 @@
+input {
+  @include proto-text-field();
+
+  @include placeholder() {
+    color: $colorGrayLight;
+  }
+}

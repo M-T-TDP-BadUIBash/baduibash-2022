@@ -1,0 +1,137 @@
+.p-main-footer {
+  background: $footerMainBackgroundColor;
+  font-size: $footerFontSize;
+  padding: $footerMainPadding;
+  text-align: $footerMainTextAlign;
+  width: $footerWidth;
+
+  &__content {
+    display: inline-block;
+    max-width: $footerContentMaxWidth;
+  }
+
+  &__link {
+    color: $footerLinkColor;
+    font-size: $footerFontSize;
+    line-height: $footerParagraphLineHeight;
+  }
+
+  &__paragraph {
+    color: $footerFontColor;
+    font-family: $footerFontFamily;
+    font-size: $footerFontSize;
+    font-weight: $footerParagraphFontWeight;
+    line-height: $footerParagraphLineHeight;
+    margin: $footerParagraphMargin 0;
+    text-align: $footerParagraphTextAlign;
+
+    &--first {
+      @extend .p-main-footer__paragraph;
+      margin-top: $footerParagraphFirstMarginTop;
+    }
+
+    &--last {
+      @extend .p-main-footer__paragraph;
+      margin-bottom: $footerParagraphLastMarginBottom;
+    }
+  }
+
+  &__images {
+    @include flexbox();
+    justify-content: space-around;
+    margin: $footerImagesMargin 0;
+  }
+}
+
+@if $isMTB == false {
+  .p-main-footer {
+    background: $footerMainBackgroundColor;
+    font-size: $footerFontSize;
+    padding: $footerMainPadding;
+    text-align: $footerMainTextAlign;
+    width: $footerWidth;
+    font-family: $footerFontFamily;
+    border-top: $footerMainBorderTop;
+
+    &__content {
+      display: inline-block;
+      max-width: $footerContentMaxWidth;
+
+      & hr {
+        border: $footerHrBorder;
+        margin: $footerHrMargin;
+      }
+    }
+
+    &__header-links {
+      margin-top: $footerHeaderLinksMarginTop;
+      display: flex;
+      flex-direction: column;
+    }
+
+    & a {
+      color: $footerLinkColor;
+    }
+
+    &__paragraph {
+      color: $footerFontColor;
+      font-size: $footerFontSize;
+      font-weight: $footerParagraphFontWeight;
+      line-height: $footerParagraphLineHeight;
+      margin-bottom: $footerParagraphMarginBottom;
+      text-align: $footerParagraphTextAlign;
+
+      &--first {
+        @extend .p-main-footer__paragraph;
+        margin-top: $footerParagraphFirstMarginTop;
+
+        > p:first-child {
+          @extend .p-main-footer__paragraph;
+          font-weight: $footerParagraphFirstPChildFontWeight;
+        }
+
+        > p {
+          @extend .p-main-footer__paragraph;
+        }
+      }
+
+      &--last {
+        @extend .p-main-footer__paragraph;
+        margin-bottom: $footerParagraphLastMarginBottom;
+        text-align: $footerParagraphLastTextAlign;
+        font-size: $typeScaleXSmall;
+        font-weight: $footerParagraphLastFontWeight;
+        line-height: $footerParagraphLastLineHeight;
+
+        > p:first-child {
+          @extend .p-main-footer__paragraph--last;
+          font-weight: $footerParagraphLastPChildFontWeight;
+        }
+
+        > p {
+          @extend .p-main-footer__paragraph--last;
+          font-weight: $footerParagraphLastPFontWeight;
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: $breakpoint--large) {
+    .p-main-footer {
+      &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: $footerHeaderDesktopAlignItems;
+      }
+
+      &__header-links {
+        margin-top: $footerHeaderLinksDesktopMargintop;
+        display: flex;
+        flex-direction: row;
+
+        a:nth-child(2) {
+          margin-left: $footerLinksDesktopMarginLeft;
+        }
+      }
+    }
+  }
+}

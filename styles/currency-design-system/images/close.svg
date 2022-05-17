@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59 (86127) - https://sketch.com -->
+    <title>Close</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="19.4780833 2.09925 17.9451667 0.56741667 10.0455 8.4681667 2.14475 0.56741667 0.61183333 2.09925 8.5125833 10 0.61183333 17.90075 2.14475 19.4325833 10.0455 11.5318333 17.9451667 19.4325833 19.4780833 17.90075 11.5773333 10"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Close" transform="translate(-3.000000, -3.000000)">
+            <polygon id="Bounding-Box" points="0 0 26 0 26 26 0 26"></polygon>
+            <g id="Mixin/Fill/Primary---1-Clipped" transform="translate(3.000000, 3.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="path-1"></g>
+                <g id="Mixin/Fill/Primary---1" mask="url(#mask-2)" fill="#FFFFFF">
+                    <g transform="translate(-3.000000, -3.000000)" id="Box">
+                        <rect x="0" y="0" width="26" height="26"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

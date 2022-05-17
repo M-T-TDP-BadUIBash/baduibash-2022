@@ -1,0 +1,48 @@
+$tooltipBackgroundColor: $colorGrayDarker;
+$tooltipFontSize: $typeScaleMedium;
+$tooltipTopLeft: $spacingLarge;
+$tooltipRightTop: 60%;
+$tooltipLeftTop: 60%;
+$tooltipBottomLeft: $spacingLarge;
+$tooltipTitleFontSize: $typeScaleMedium;
+$tooltipIconContentFontSize: $typeScaleMedium;
+$tooltipShadow: 0 2px 6px 0 rgba(0, 0, 0, .25);
+
+$tooltipContentFontWeight: $typeFontWeightRegular;
+$tooltipContentColor: $colorWhite;
+$tooltipContentParagraphLineHeight: $typeScaleLarge;
+$tooltipContentParagraphMargin: 0;
+$tooltipContentParagraphFontWeight: $typeFontWeightRegular;
+$tooltipContentParagraphColor: $colorWhite;
+$tooltipContentParagraphLineHeight: $typeScaleLarge;
+$tooltipIconContentParagraphLineHeight: $typeScaleLarge;
+$tooltipIconContentParagraphMargin: 0;
+$tooltipIconContentParagraphColor: $colorWhite;
+$tooltipTitleColor: $colorWhite;
+$tooltipTitleFontWeight: $typeFontWeightBold;
+$tooltipCloseButtonFontSize: $typeScaleXSmall;
+$tooltipCloseButtonIconFontSize: $typeScaleXSmall;
+
+@if $isWTC {
+    $tooltipBackgroundColor: $colorPrimaryBase;
+    $tooltipFontSize: $typeScaleXXSmall;
+    $tooltipTitleFontSize: $typeScaleSmall;
+    $tooltipTopLeft: calc(50% - 5px);
+    $tooltipRightTop: $spacingSmall;
+    $tooltipLeftTop: $spacingSmall;
+    $tooltipBottomLeft: calc(50% - 5px);
+    $tooltipShadow: none;
+    $tooltipContentFontWeight: $typeFontWeightRegular;
+    $tooltipContentColor: $colorGrayscaleWhite;
+    $tooltipContentParagraphLineHeight: $typeScaleLarge;
+    $tooltipContentParagraphMargin: 0;
+    $tooltipContentParagraphFontWeight: $typeFontWeightRegular;
+    $tooltipContentParagraphColor: $colorGrayscaleWhite;
+    $tooltipIconContentParagraphLineHeight: $typeScaleLarge;
+    $tooltipIconContentParagraphMargin: 0;
+    $tooltipIconContentParagraphColor: $colorGrayscaleWhite;
+    $tooltipTitleColor: $colorGrayscaleWhite;
+    $tooltipTitleFontWeight: $typeFontWeightMedium;
+    $tooltipCloseButtonFontSize: $typeScaleXXSmall;
+    $tooltipCloseButtonIconFontSize: $typeScaleXXSmall;
+}

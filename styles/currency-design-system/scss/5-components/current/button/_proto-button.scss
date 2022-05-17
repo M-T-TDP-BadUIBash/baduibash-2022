@@ -1,0 +1,186 @@
+// Change with caution, these are used throughout multiple instances.
+// Alter only if you are certain that the change should cascade to all instances within all components and elements.
+// Most edits to prototypes should be extending by adding variations rather than altering current code
+
+$_darkenValue: 5%; // Value for darkening on the hover state\\
+
+@mixin proto-button-base {
+  // Standard Border Radius
+  @include prefixer(border-radius, $buttonBorderRadius);
+
+  // Standard Display Properties
+  @include prefixer(box-sizing, border-box);
+  align-items: center;
+  cursor: $buttonDefaultCursor;
+  display: $buttonDisplay;
+  height: $buttonHeight;
+  justify-content: center;
+  @include prefixer(user-select, none);
+  width: $buttonWidth;
+  vertical-align: top;
+
+  // Font Settings
+  color: $buttonTextColor;
+  font-family: $buttonFontFamily;
+  font-size: $buttonFontSize;
+  font-weight: $buttonFontWeight;
+
+  // Text Settings
+  text-align: $buttonTextAlignment;
+  text-decoration: $buttonTextStyle;
+
+  // Spacing Settings
+  letter-spacing: 0;
+  line-height: $buttonLineHeight;
+  padding: $buttonPaddingTop $buttonPaddingRight $buttonPaddingBottom
+    $buttonPaddingLeft;
+  margin: $buttonMargin;
+
+  // WT Setting Min Width
+  @if $isWTC == true {
+    min-width: $buttonMinWidth;
+    height: $buttonHeight;
+    min-height: $buttonMinHeight;
+  }
+
+  .icon {
+    margin-right: $buttonIconMarginRight;
+    font-size: $buttonIconFontSize;
+  }
+}
+
+@mixin proto-button() {
+  @include proto-button-base();
+  background-color: $buttonBackgroundColor;
+  // Default Button set to default color to accommodate for buttons with strokes
+  border-color: $buttonBorderColor;
+  border-style: $buttonBorderStyle;
+  border-width: $buttonBorderWeight;
+  width: $buttonWidth;
+
+  // Interaction States
+  &:visited {
+    background-color: $buttonBackgroundColor;
+    color: $buttonTextColor;
+  }
+  &:hover {
+    background-color: darken($buttonBackgroundColor, $_darkenValue);
+    border-color: darken($buttonBorderColor, $_darkenValue);
+    color: $buttonTextColor;
+    cursor: $buttonDefaultCursor;
+  }
+  &:active {
+    background-color: darken($buttonBackgroundColor, $_darkenValue);
+    border-color: darken($buttonBorderColor, $_darkenValue);
+    color: $buttonTextColor;
+    cursor: $buttonDefaultCursor;
+  }
+  &:focus {
+    outline-width: 2px;
+    outline-style: solid;
+    outline-offset: 4px;
+    outline-color: -moz-focusring;
+    outline-color: -moz-mac-focusring;
+    outline-color: -webkit-focus-ring-color;
+    outline-color: -o-focus-ring-color;
+    outline-color: -ms-focus-ring-color;
+  }
+
+  // Disabled State - We should not recommend these, they are not accessible
+  &[disabled="disabled"] {
+    cursor: $buttonDisabledCursor;
+  }
+}
+
+@mixin proto-button--primary() {
+  @include proto-button-base();
+  background-color: $buttonPrimaryBackgroundColor;
+  // Primary Button set to primary color to accommodate for buttons with strokes
+  border-color: $buttonPrimaryBorderColor;
+  border-style: $buttonPrimaryBorderStyle;
+  border-width: $buttonPrimaryBorderWeight;
+
+  // Font Settings
+  color: $buttonPrimaryTextColor;
+
+  // Text Settings
+  text-decoration: $buttonPrimaryTextStyle;
+
+  // Interaction States
+  &:visited {
+    background-color: $buttonPrimaryBackgroundColor;
+    color: $buttonPrimaryTextColor;
+  }
+  &:hover {
+    @if $isMTB == true {
+      background-color: darken($buttonPrimaryBackgroundColor, $_darkenValue);
+      border-color: darken($buttonPrimaryBorderColor, $_darkenValue);
+      color: $buttonPrimaryTextColor;
+    }
+  }
+  &:hover {
+    @if $isWTC == true {
+      background-color: $buttonHoverColor;
+      border-color: $buttonHoverColor;
+      color: $buttonPrimaryTextColor;
+    }
+  }
+  &:active {
+    background-color: darken($buttonPrimaryBackgroundColor, $_darkenValue);
+    border-color: darken($buttonPrimaryBorderColor, $_darkenValue);
+    color: $buttonPrimaryTextColor;
+  }
+  &:focus {
+    outline-width: 2px;
+    outline-style: solid;
+    outline-offset: 4px;
+    outline-color: -moz-focusring;
+    outline-color: -moz-mac-focusring;
+    outline-color: -webkit-focus-ring-color;
+    outline-color: -o-focus-ring-color;
+    outline-color: -ms-focus-ring-color;
+  }
+}
+
+// Small Button Styles
+@mixin proto-small-button() {
+  @if $isWTC {
+    @include proto-button();
+    @include prefixer(border-radius, $smallButtonBorderRadius);
+    height: $smallButtonHeight;
+    font-size: $smallButtonFontSize;
+    min-height: $smallButtonMinHeight;
+    padding: $smallButtonPaddingTop
+      $smallButtonPaddingRight
+      $smallButtonPaddingBottom
+      $smallButtonPaddingLeft;
+  }
+}
+
+@mixin proto-small-button--primary() {
+  @if $isWTC {
+    @include proto-button--primary();
+    @include prefixer(border-radius, $smallButtonBorderRadius);
+    height: $smallButtonHeight;
+    font-size: $smallButtonFontSize;
+    min-height: $smallButtonMinHeight;
+    padding: $smallButtonPaddingTop
+      $smallButtonPaddingRight
+      $smallButtonPaddingBottom
+      $smallButtonPaddingLeft;
+  }
+}
+
+// Back Button
+@mixin proto-button--back {
+  @if $isWTC {
+    font-size: $buttonBackFontSize;
+    border: $buttonBackBorder;
+    border-radius: $buttonBackBorderRadius;
+    padding: $buttonBackPadding;
+    margin-right: $buttonBackMarginRight;
+    color: $buttonBackColor;
+    box-sizing: border-box;
+    background-color: transparent;
+  }
+}

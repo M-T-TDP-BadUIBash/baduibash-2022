@@ -1,0 +1,42 @@
+.c-sub-toggle {
+    @if $isWTC == true {
+      &__container {
+        width: 100%;
+        color: $toggleContainerColor;
+      }
+
+      &__content {
+        position: relative;
+        top: $toggleContentTop;
+        margin: 0 !important;
+      }
+
+      &__section:hover {
+        cursor: pointer;
+        color: $toggleSectionColor;
+      }
+
+      &__section {
+        padding-bottom: $toggleSectionPaddingBottom;
+        height: 100%;
+        box-sizing: border-box;
+        display: inline-block;
+        padding: 0 $spacingLarge;
+        border-right: $subToggleBorderRight solid $toggleContainerBorderBottomColor;
+
+        &:last-child {
+          border-right: none;
+        }
+
+         &:first-child {
+          padding-left: 0;
+        }
+
+        &--selected {
+          position: relative;
+          color: $toggleSectionColor;
+          font-weight: $toggleFontWeight;
+        }
+      }
+    }
+}

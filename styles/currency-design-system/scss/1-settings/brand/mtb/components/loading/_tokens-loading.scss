@@ -1,0 +1,16 @@
+$mtb-loading-tokens: (
+  loadingFontFamily: $typeFontFamily,
+  loadingAlignment: center,
+  loadingBorderRadius: 2px,
+  loadingPadding: 16px,
+  loadingBackgroundColor: $colorWhite,
+  loadingNonBlockBackgroundColor: $colorGrayDarker,
+  loadingFontColor: $colorGrayDarker,
+  loadingNonBlockFontColor: $colorWhite,
+  loadingSpinnerBackground: $colorConicGradient,
+  loadingSpinnerBorderSize: $spacingXXXSmall,
+  loadingSpinnerSize: $spacingLarge,
+  loadingFontSize: $typeBodyFontSize,
+  loadingFontWeight: 100,
+  loadingContentPadding: $spacingXSmall,
+  );

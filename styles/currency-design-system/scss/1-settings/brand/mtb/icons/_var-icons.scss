@@ -1,0 +1,443 @@
+@function unicode($str) {
+    @return unquote("\"\\#{$str}\"");
+  } 
+$icon--list-with-plus-sign: unicode(ea02);
+$icon--list-with-check: unicode(ea03);
+$icon--success: unicode(ea04);
+$icon--error: unicode(ea05);
+$icon--printer: unicode(ea06);
+$icon--people: unicode(ea07);
+$icon--pause: unicode(ea08);
+$icon--arrow-without-tail-up: unicode(ea09);
+$icon--arrow-without-tail-right: unicode(ea0a);
+$icon--arrow-without-tail-down: unicode(ea0b);
+$icon--arrow-without-tail-left: unicode(ea0c);
+$icon--arrow-with-tail-up: unicode(ea0d);
+$icon--arrow-with-tail-right: unicode(ea0e);
+$icon--arrow-with-tail-down: unicode(ea0f);
+$icon--arrow-with-tail-left: unicode(ea10);
+$icon--counter-directional: unicode(ea11);
+$icon--plus-sign: unicode(ea12);
+$icon--minus-sign: unicode(ea13);
+$icon--check-mark: unicode(ea14);
+$icon--x: unicode(ea15);
+$icon--question: unicode(ea16);
+$icon--exclamation: unicode(ea17);
+$icon--info: unicode(ea18);
+$icon--cog: unicode(ea19);
+$icon--map-pin: unicode(ea1a);
+$icon--eye-open: unicode(ea1b);
+$icon--eye-closed: unicode(ea1c);
+$icon--person: unicode(ea1d);
+$icon--person-with-plus-sign: unicode(ea1e);
+$icon--person-with-minus-sign: unicode(ea1f);
+$icon--play: unicode(ea20);
+$icon--phone: unicode(ea21);
+$icon--speech-bubble: unicode(ea22);
+$icon--mobile: unicode(ea23);
+$icon--laptop: unicode(ea24);
+$icon--trash-can: unicode(ea25);
+$icon--lists: unicode(ea26);
+$icon--usd-symbol: unicode(ea27);
+$icon--coin: unicode(ea28);
+$icon--coin-in-hand: unicode(ea29);
+$icon--bill: unicode(ea2a);
+$icon--bill-in-hand: unicode(ea2b);
+$icon--bill-stack: unicode(ea2c);
+$icon--check: unicode(ea2d);
+$icon--check-with-pen: unicode(ea2e);
+$icon--card: unicode(ea2f);
+$icon--card-in-hand: unicode(ea30);
+$icon--card-in-slot: unicode(ea31);
+$icon--visa: unicode(ea32);
+$icon--master-card: unicode(ea33);
+$icon--discover: unicode(ea34);
+$icon--american-express: unicode(ea35);
+$icon--sack: unicode(ea36);
+$icon--receipt: unicode(ea37);
+$icon--happy-face: unicode(ea38);
+$icon--neutral-face: unicode(ea39);
+$icon--sad-face: unicode(ea3a);
+$icon--stopwatch: unicode(ea3b);
+$icon--clock: unicode(ea3c);
+$icon--id-badge: unicode(ea3d);
+$icon--bank: unicode(ea3e);
+$icon--house: unicode(ea3f);
+$icon--office-building: unicode(ea40);
+$icon--facebook-logo: unicode(ea41);
+$icon--twitter-logo: unicode(ea42);
+$icon--linkedin-logo: unicode(ea43);
+$icon--zelle-logo: unicode(ea44);
+$icon--apple-logo: unicode(ea45);
+$icon--android-logo: unicode(ea46);
+$icon--unlocked-padlock: unicode(ea47);
+$icon--locked-padlock: unicode(ea48);
+$icon--bell: unicode(ea49);
+$icon--calendar: unicode(ea4a);
+$icon--star: unicode(ea4b);
+$icon--pencil: unicode(ea4c);
+$icon--chainlink: unicode(ea4d);
+$icon--magnifiying-glass: unicode(ea4e);
+$icon--envelope: unicode(ea4f);
+$icon--envelope-with-currency: unicode(ea50);
+$icon--finger-print: unicode(ea51);
+$icon--camera: unicode(ea52);
+$icon--sheet-of-paper: unicode(ea53);
+$icon--piggy-bank: unicode(ea54);
+$icon--umbrella: unicode(ea55);
+$icon--arrow-with-tail-around: unicode(ea56);
+$icon--more: unicode(ea57);
+
+.icon {
+    display: inline-block;
+    font: normal normal normal 1em/1 'Nucleo';
+    speak: none;
+    text-transform: none;
+    /* Better Font Rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon--list-with-plus-sign::before {
+    content: $icon--list-with-plus-sign;
+}
+
+.icon--list-with-check::before {
+    content: $icon--list-with-check;
+}
+
+.icon--success::before {
+    content: $icon--success;
+}
+
+.icon--error::before {
+    content: $icon--error;
+}
+
+.icon--printer::before {
+    content: $icon--printer;
+}
+
+.icon--people::before {
+    content: $icon--people;
+}
+
+.icon--pause::before {
+    content: $icon--pause;
+}
+
+.icon--arrow-without-tail-up::before {
+    content: $icon--arrow-without-tail-up;
+}
+
+.icon--arrow-without-tail-right::before {
+    content: $icon--arrow-without-tail-right;
+}
+
+.icon--arrow-without-tail-down::before {
+    content: $icon--arrow-without-tail-down;
+}
+
+.icon--arrow-without-tail-left::before {
+    content: $icon--arrow-without-tail-left;
+}
+
+.icon--arrow-with-tail-up::before {
+    content: $icon--arrow-with-tail-up;
+}
+
+.icon--arrow-with-tail-right::before {
+    content: $icon--arrow-with-tail-right;
+}
+
+.icon--arrow-with-tail-down::before {
+    content: $icon--arrow-with-tail-down;
+}
+
+.icon--arrow-with-tail-left::before {
+    content: $icon--arrow-with-tail-left;
+}
+
+.icon--counter-directional::before {
+    content: $icon--counter-directional;
+}
+
+.icon--plus-sign::before {
+    content: $icon--plus-sign;
+}
+
+.icon--minus-sign::before {
+    content: $icon--minus-sign;
+}
+
+.icon--check-mark::before {
+    content: $icon--check-mark;
+}
+
+.icon--x::before {
+    content: $icon--x;
+}
+
+.icon--question::before {
+    content: $icon--question;
+}
+
+.icon--exclamation::before {
+    content: $icon--exclamation;
+}
+
+.icon--info::before {
+    content: $icon--info;
+}
+
+.icon--cog::before {
+    content: $icon--cog;
+}
+
+.icon--map-pin::before {
+    content: $icon--map-pin;
+}
+
+.icon--eye-open::before {
+    content: $icon--eye-open;
+}
+
+.icon--eye-closed::before {
+    content: $icon--eye-closed;
+}
+
+.icon--person::before {
+    content: $icon--person;
+}
+
+.icon--person-with-plus-sign::before {
+    content: $icon--person-with-plus-sign;
+}
+
+.icon--person-with-minus-sign::before {
+    content: $icon--person-with-minus-sign;
+}
+
+.icon--play::before {
+    content: $icon--play;
+}
+
+.icon--phone::before {
+    content: $icon--phone;
+}
+
+.icon--speech-bubble::before {
+    content: $icon--speech-bubble;
+}
+
+.icon--mobile::before {
+    content: $icon--mobile;
+}
+
+.icon--laptop::before {
+    content: $icon--laptop;
+}
+
+.icon--trash-can::before {
+    content: $icon--trash-can;
+}
+
+.icon--lists::before {
+    content: $icon--lists;
+}
+
+.icon--usd-symbol::before {
+    content: $icon--usd-symbol;
+}
+
+.icon--coin::before {
+    content: $icon--coin;
+}
+
+.icon--coin-in-hand::before {
+    content: $icon--coin-in-hand;
+}
+
+.icon--bill::before {
+    content: $icon--bill;
+}
+
+.icon--bill-in-hand::before {
+    content: $icon--bill-in-hand;
+}
+
+.icon--bill-stack::before {
+    content: $icon--bill-stack;
+}
+
+.icon--check::before {
+    content: $icon--check;
+}
+
+.icon--check-with-pen::before {
+    content: $icon--check-with-pen;
+}
+
+.icon--card::before {
+    content: $icon--card;
+}
+
+.icon--card-in-hand::before {
+    content: $icon--card-in-hand;
+}
+
+.icon--card-in-slot::before {
+    content: $icon--card-in-slot;
+}
+
+.icon--visa::before {
+    content: $icon--visa;
+}
+
+.icon--master-card::before {
+    content: $icon--master-card;
+}
+
+.icon--discover::before {
+    content: $icon--discover;
+}
+
+.icon--american-express::before {
+    content: $icon--american-express;
+}
+
+.icon--sack::before {
+    content: $icon--sack;
+}
+
+.icon--receipt::before {
+    content: $icon--receipt;
+}
+
+.icon--happy-face::before {
+    content: $icon--happy-face;
+}
+
+.icon--neutral-face::before {
+    content: $icon--neutral-face;
+}
+
+.icon--sad-face::before {
+    content: $icon--sad-face;
+}
+
+.icon--stopwatch::before {
+    content: $icon--stopwatch;
+}
+
+.icon--clock::before {
+    content: $icon--clock;
+}
+
+.icon--id-badge::before {
+    content: $icon--id-badge;
+}
+
+.icon--bank::before {
+    content: $icon--bank;
+}
+
+.icon--house::before {
+    content: $icon--house;
+}
+
+.icon--office-building::before {
+    content: $icon--office-building;
+}
+
+.icon--facebook-logo::before {
+    content: $icon--facebook-logo;
+}
+
+.icon--twitter-logo::before {
+    content: $icon--twitter-logo;
+}
+
+.icon--linkedin-logo::before {
+    content: $icon--linkedin-logo;
+}
+
+.icon--zelle-logo::before {
+    content: $icon--zelle-logo;
+}
+
+.icon--apple-logo::before {
+    content: $icon--apple-logo;
+}
+
+.icon--android-logo::before {
+    content: $icon--android-logo;
+}
+
+.icon--unlocked-padlock::before {
+    content: $icon--unlocked-padlock;
+}
+
+.icon--locked-padlock::before {
+    content: $icon--locked-padlock;
+}
+
+.icon--bell::before {
+    content: $icon--bell;
+}
+
+.icon--calendar::before {
+    content: $icon--calendar;
+}
+
+.icon--star::before {
+    content: $icon--star;
+}
+
+.icon--pencil::before {
+    content: $icon--pencil;
+}
+
+.icon--chainlink::before {
+    content: $icon--chainlink;
+}
+
+.icon--magnifiying-glass::before {
+    content: $icon--magnifiying-glass;
+}
+
+.icon--envelope::before {
+    content: $icon--envelope;
+}
+
+.icon--envelope-with-currency::before {
+    content: $icon--envelope-with-currency;
+}
+
+.icon--finger-print::before {
+    content: $icon--finger-print;
+}
+
+.icon--camera::before {
+    content: $icon--camera;
+}
+
+.icon--sheet-of-paper::before {
+    content: $icon--sheet-of-paper;
+}
+
+.icon--piggy-bank::before {
+    content: $icon--piggy-bank;
+}
+
+.icon--umbrella::before {
+    content: $icon--umbrella;
+}
+
+.icon--arrow-with-tail-around::before {
+    content: $icon--arrow-with-tail-around;
+}
+
+.icon--more::before {
+    content: $icon--more;
+}

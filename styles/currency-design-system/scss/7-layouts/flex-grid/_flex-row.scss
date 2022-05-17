@@ -1,0 +1,25 @@
+.l-flex-row {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: $_gutter-compensation;
+  margin-left: $_gutter-compensation;
+
+  &--reverse {
+    @extend .l-flex-row;
+    flex-direction: row-reverse;
+  }
+
+  &--no-margin {
+    @extend .l-flex-row;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  &--break {
+    flex-basis: 100%;
+    height: 0;
+  }
+}

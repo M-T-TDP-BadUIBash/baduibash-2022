@@ -1,0 +1,19 @@
+h1 {
+  @include proto-title-1();
+  color: $colorGrayDarker;
+}
+
+h2 {
+  @include proto-title-2();
+  color: $colorGrayDarker;
+}
+
+h3 {
+  @include proto-title-3();
+  color: $colorGrayDarker;
+}
+
+h4 {
+  @include proto-title-4();
+  color: $colorGrayDarker;
+}

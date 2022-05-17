@@ -1,0 +1,53 @@
+@mixin headerMenuItem() {
+    display: flex;
+    height: 100%;
+    color: $headerMenuItemColor;
+    display: inline-block;
+    font-family: $headerMenuItemFont, Arial, sans-serif;
+    position: relative;
+    width: auto;
+    transition: all .4s ease-in-out 0s;
+
+    &:hover {
+      background: $headerMenuItemBackground;
+      @media only screen and (max-width: $breakpoint--large) {
+        background: transparent;
+      }
+
+      .p-main-header__menu-item-link {
+        color: $headerMenuItemColorHover;
+        @media only screen and (max-width: $breakpoint--large) {
+          color: $headerResponsiveLinkColorHover;
+
+        }
+      }
+    }
+
+    &:hover .p-main-header__submenu {
+      opacity: 1;
+      // width: max-content;
+      height: auto;
+      padding: $spacingLarge;
+      width: auto;
+    }
+    &:hover::after {
+      background-color: $headerMenuItemLineColor;
+      opacity: 1;
+      transform: scaleX(1);
+    }
+    
+    &::after {        
+      background-color: $colorWhite;
+      bottom: $headerMenuItemPositionBtm;
+      content: "";
+      height: $headerMenuItemLineHeight;
+      left: $headerMenuItemPositionLft;
+      opacity: 0;
+      position: absolute;
+      pointer-events: none;
+      transform: scaleX(0);
+      transform-origin: $headerMenuItemOrigin;
+      transition: all 0.3s ease-in-out 0s;
+      width: $headerMenuItemLineWidth;
+    }
+  }

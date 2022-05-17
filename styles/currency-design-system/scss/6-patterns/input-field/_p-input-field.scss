@@ -1,0 +1,26 @@
+.p-input-field {
+  &__header {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__label {
+    margin-right: $inputFieldLabelMarginRight;
+  }
+
+  &__sub-label {
+    color: $inputFieldSublabelColor;
+    margin-left: auto;
+    margin-bottom: $inputFieldSublabelMarginBottom;
+  }
+
+  &__description {
+    color: $inputFieldDescriptionColor;
+    margin-top: $inputFieldDescriptionMarginTop;
+  }
+
+  .c-icon-link {
+    display: block;
+    margin-bottom: $inputFieldIconLinkMarginBottom;
+  }
+}

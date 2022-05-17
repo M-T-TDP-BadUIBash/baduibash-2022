@@ -1,0 +1,27 @@
+// Change with caution, these are used throughout multiple instances.
+// Alter only if you are certain that the change should cascade to all instances within all components and elements.
+// Most edits to prototypes should be extending by adding variations rather than altering current code
+
+ @mixin proto-text-field() {
+   -webkit-appearance: $textFieldAppearance;
+   -moz-appearance :$textFieldAppearance;
+   -ms-appearance: $textFieldAppearance;
+   appearance: $textFieldAppearance;
+   background-clip: $textFieldBackgroundClip;
+   background-color: $textFieldBackgroundColor;
+   border: $textFieldBorderSize $textFieldBorderStyle $textFieldBorderColor;
+   @include prefixer(border-radius, $textFieldBorderRadius);
+   @include prefixer(box-sizing, border-box);
+   color: $textFieldFontColor;
+   display: $textFieldDisplay;
+   font-family: $textFieldFontFamily;
+   font-size: $textFieldFontSize;
+   font-weight: $textFieldFontWeight;
+   height: $textFieldHeight;
+   line-height: $textFieldLineHeight;
+   margin: $textFieldMargin;
+   padding: $textFieldPadding;
+   transition: $textFieldTransitionBorderColor, $textFieldTransitionBoxShadow;
+   vertical-align: $textFieldVerticalAlign;
+   width: $textFieldWidth;
+ }

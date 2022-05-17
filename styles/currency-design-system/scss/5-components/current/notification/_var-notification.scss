@@ -1,0 +1,63 @@
+$notificationFontFamily: $typeFontFamily;
+$notificationFontColor: $colorGrayDarker;
+$notificationBaseMainColor: #e7ebf3;
+$notificationBaseBaseColor: #6e86a6;   
+$notificationSuccessMainColor: #d8f3e4;
+$notificationSuccessBaseColor: #5bb684;   
+$notificationWarningMainColor: #ffe4cb;
+$notificationWarningBaseColor: #ec9747;    
+$notificationErrorMainColor: #ffd4d1;
+$notificationErrorBaseColor: #be4940;    
+$notificationInlineBaseMainColor: $colorWhite;
+$notificationInlineBaseBaseColor: #6e86a6;    
+$notificationInlineSuccessMainColor: $colorWhite;
+$notificationInlineSuccessBaseColor: #5bb684;    
+$notificationInlineWarningMainColor: $colorWhite;
+$notificationInlineWarningBaseColor: #ec9747;    
+$notificationInlineErrorMainColor: $colorWhite;
+$notificationInlineErrorBaseColor: #be4940;
+
+$notificationLineHeight: 1.25;
+$notificationAlignSelf: flex-start;
+$notificationBorderStyle: solid;
+$notificationFontSize: $typeScaleSmall;
+$notificationFontWeight: $typeFontWeight;
+$notificationIconMarginLeftRight: -$spacingXXSmall;
+$notificationContentPadding: 14px;
+$notificationErrorFontColor: $colorGrayDarker;
+$notificationBorderLeftSize: 1px;
+$notificationBorderRadiusSize: 2px;
+$notificationIconFontSize: $typeScaleXLarge;
+$notificationIconLineHeight: 0;
+$notificationIconMarginTop: -4px;
+
+@if $isWTC {
+    $notificationFontSize: $typeScaleXSmall;
+    $notificationFontColor: $colorGrayscaleBlack;
+    $notificationFontWeight: $typeFontWeightRegular;
+    // Inline Styles
+    $notificationInlineBaseMainColor:$colorGrayscaleWhiteDark;
+    $notificationInlineBaseBaseColor: $colorGrayscaleGrayBase;
+    $notificationInlineSuccessMainColor: $colorSemanticGreenLight;
+    $notificationInlineSuccessBaseColor: $colorSemanticGreenBase;
+    $notificationInlineWarningMainColor: $colorSemanticOrangeLight;
+    $notificationInlineWarningBaseColor: $colorSecondaryLight;
+    $notificationInlineErrorMainColor: $colorSemanticRedLight;
+    $notificationInlineErrorBaseColor: $colorSemanticRedBase;
+
+    // Page Level Styles
+    $notificationBaseMainColor: $colorGrayscaleWhite;
+    $notificationBaseBaseColor:$colorGrayscaleGrayBase;
+    $notificationBaseFontColor: $colorGrayscaleBlack;
+    $notificationSuccessMainColor: $colorGrayscaleWhite;
+    $notificationSuccessBaseColor: $colorSemanticGreenBase;
+    $notificationSuccessFontColor: $colorGrayscaleBlack;
+    $notificationWarningMainColor: $colorGrayscaleWhite;
+    $notificationWarningBaseColor: $colorSecondaryLight;
+    $notificationWarningFontColor: $colorGrayscaleBlack;
+    $notificationErrorMainColor: $colorGrayscaleWhite;
+    $notificationErrorBaseColor: $colorSemanticRedBase;
+    $notificationErrorFontColor: $colorGrayscaleBlack;
+    $notificationBorderRadiusSize: 4px;
+    
+}

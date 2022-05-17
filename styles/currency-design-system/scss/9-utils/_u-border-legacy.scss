@@ -1,0 +1,126 @@
+$sides: top bottom left right;
+
+@mixin borderSides ($sides) {
+
+  @each $type,
+  $var in $colors {
+    &--#{$type} {
+      border-#{$sides}: 1px solid $var;
+    }
+  }
+}
+
+@mixin borderSidesLarge ($sides) {
+
+  @each $type,
+  $var in $colors {
+    &--large-#{$type} {
+      border-#{$sides}: 8px solid $var;
+    }
+  }
+}
+
+.u-border-legacy {
+
+  @each $type,
+  $var in $colors {
+    &--#{$type} {
+      border: 1px solid $var;
+    }
+  }
+
+  @each $side in $sides {
+    &-#{$side} {
+      @include borderSides($side);
+    }
+  }
+
+  // large borders 8px 
+  @each $type,
+  $var in $colors {
+    &--large-#{$type} {
+      border: 8px solid $var;
+    }
+  }
+
+  @each $side in $sides {
+    &-#{$side} {
+      @include borderSidesLarge($side);
+    }
+  }
+
+  &-bottom--dotted {
+    list-style: none;
+    background-image: linear-gradient(to right, $colorPrimaryLight 40%, rgba(255, 255, 255, 0) 20%);
+    background-position: bottom;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    border: none;
+    position: relative;
+  }
+
+  &-top--dotted {
+    list-style: none;
+    background-image: linear-gradient(to right, $colorPrimaryLight 40%, rgba(255, 255, 255, 0) 20%);
+    background-position: top;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    border: none;
+    position: relative;
+  }
+
+  &-vertical--dotted {
+    list-style: none;
+    background-image: linear-gradient(to right, $colorPrimaryLight 40%, rgba(255, 255, 255, 0) 20%), linear-gradient(to right, $colorPrimaryLight 40%, rgba(255, 255, 255, 0) 20%);
+    background-position: top, bottom;
+    background-size: 10px 1px, 10px 1px;
+    background-repeat: repeat-x, repeat-x;
+    border: none;
+    position: relative;
+  }
+
+
+  @media only screen and (max-width: $desktopBreakpoint - 1px) {
+    &--xs {
+      @each $side in $sides {
+        &-#{$side} {
+          @include borderSides($side);
+        }
+      }
+
+      // large border 8px
+      @each $side in $sides {
+        &-#{$side} {
+          @include borderSidesLarge($side);
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: $desktopBreakpoint) {
+    &--sm {
+      @each $side in $sides {
+        &-#{$side} {
+          @include borderSides($side);
+        }
+      }
+
+      // large border 8px
+      @each $side in $sides {
+        &-#{$side} {
+          @include borderSidesLarge($side);
+        }
+      }
+
+      &--bottom-dotted {
+        list-style: none;
+        background-image: linear-gradient(to right, $colorPrimaryLight 40%, rgba(255, 255, 255, 0) 20%);
+        background-position: bottom;
+        background-size: 10px 1px;
+        background-repeat: repeat-x;
+        border: none;
+        position: relative;
+      }
+    }
+  }
+}

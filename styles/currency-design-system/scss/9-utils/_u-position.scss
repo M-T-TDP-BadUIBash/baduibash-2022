@@ -1,0 +1,17 @@
+.u-position {
+  &--absolute {
+    position: absolute;
+  }
+
+  &--relative {
+    position: relative;
+  }
+
+  &--fixed {
+    position: fixed;
+  }
+
+  &--unset {
+    position: unset;
+  }
+}

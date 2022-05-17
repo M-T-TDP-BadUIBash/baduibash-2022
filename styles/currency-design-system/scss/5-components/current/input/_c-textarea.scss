@@ -1,0 +1,15 @@
+.c-textarea {
+  @include proto-text-field();
+  height: $textAreaHeight;
+  resize: $textAreaResize;
+  @include placeholder() {
+    color: $textAreaPlaceholderFontColor;
+    position: $textFieldPosition;
+  }
+
+  &:focus {
+    //Dont mess with default focus states; users who need it expect the default
+    box-shadow: $textAreaFocusBoxShadow;
+
+  }
+}

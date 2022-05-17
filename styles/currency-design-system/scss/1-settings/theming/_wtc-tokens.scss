@@ -1,0 +1,281 @@
+// Abstracts core component styles into key value pair so that it can be generated from json.
+// These tokens set the styles for the M&T Bank Theme
+$tokens: (
+  color: (
+    PrimaryBase: #425968,
+    PrimaryDark: #010000,
+    PrimaryLight: #E0E9ED,
+
+    GreenBase: #338500,
+    GreenLight: #EAF7ED,
+    BlueBase: #639AC3,
+    BlueLight: #E2ECF4,
+    BlueDark: #153358,
+    RedBase: #DD012C,
+    RedLight: #F34235,
+    YellowBase: #FFB300,
+    YellowLight: #FFF1D0,
+
+    GrayBase: #697480,
+    GrayDark: #545d66,
+    GrayDarker: #3f464c,
+    GrayLight: #ADB8BF,
+    GrayLighter: #edf4f7,
+
+    white: #FFFFFF,
+    black: #000000,
+
+    // t7 - other colors
+    PrimaryLighter: #EDECE4,
+    PrimaryLightest: #f5f8fa,
+
+    SecondaryDark1: #60517e,
+    SecondaryDark2: #6e295b,
+    SecondaryDark3: #b23e62,
+    SecondaryDark4: #F16521,
+    SecondaryDark5: #989E36,
+    SecondaryDark6: #6C8C7C,
+    SecondaryDark7: #3253A4,
+
+    SecondaryLight1: #b3aed0,
+    SecondaryLight2: #BD9CB6,
+    SecondaryLight3: #D99CA3,
+    SecondaryLight4: #ffae52,
+    SecondaryLight5: #d8d488,
+    SecondaryLight6: #bcc8b2,
+    SecondaryLight7: #A7B7DE,
+    SecondaryLight8: #adb8bf,
+    SecondaryLight9:#faf9f4,
+
+    OrangeBase: #f16521,
+    OrangeDark: #c53e0d,
+
+    GrayBase2: #6c7784,
+    GrayBase3: #7c8a98,
+    GrayDarkest: #2a2e33,
+    GrayLightest: #f5f8fa,
+
+    // Chart Colors
+    AssetPrivateMarkets: #60517e,
+    AssetHedgeFunds: #6e295b,
+    AssetCash: #D85427,
+    AssetRealAssets: #989E36,
+    AssetFixedIncome: #6C8C7C,
+    AssetEquities: #3253A4,
+    AssetOther: #95A0A8,
+
+
+    //end added colors
+  ),
+  focus: (
+    focusWidth: 5px,
+    focusStyle: solid,
+    focusColor: #7AB800
+  ),
+  font: (
+    fontFamily : Proxima Nova,
+    fontFileNameThin: ProximaNova-Light,
+    fontFileNameThinItalic: ProximaNova-LightItalic,
+
+    fontFileNameNormal: ProximaNova-Regular,
+    fontFileNameNormalItalic: ProximaNova-RegularItalic,
+
+    fontFileNameBold: ProximaNova-Bold,
+    fontFileNameBoldItalic: ProximaNova-BoldItalic,
+
+    fontType : 'otf',
+
+    typeScaleXXSmall: 10px,
+    typeScaleXSmall: 12px,
+    typeScaleSmall: 14px,
+    typeScaleMedium: 18px,
+    typeScaleLarge: 20px,
+    typeScaleXLarge: 24px,
+    typeScaleXXLarge: 28px,
+    typeScaleXXXLarge: 32px,
+
+// added - t7
+    typeScaleXXXXLarge: 40px
+  ),
+  spacing: (
+    // spacingScaleXXSmall: 2px,
+    // spacingScaleXSmall: 4px,
+    // spacingScaleSmall: 8px,
+    // spacingScaleMedium: 16px,
+    // spacingScaleLarge: 32px,
+    // spacingScaleXLarge: 64px,
+    // t7 modified spacing
+    spacingScaleXXSmall: 2px,
+    spacingScaleXSmall: 4px,
+    spacingScaleSmall: 8px,
+    spacingScaleMedium: 14px,
+    spacingScaleLarge: 20px,
+    spacingScaleXLarge: 36px,
+    spacingScaleXXLarge: 68px
+  ),
+  typography: (
+    titleFontFamily: Proxima Nova,
+    titleLEtterSpacing: 0.2em,
+
+    titleOneSize: 40px,
+    titleOneWeight: 300,
+    titleOneLineHeight: 1.2,
+
+    titleTwoSize: 24px,
+    titleTwoWeight: 300,
+    titleTwoLineHeight: 1.2,
+
+    titleThreeSize: 14px,
+    titleThreeWeight: bold,
+    titleThreeLineHeight: 1.2,
+
+    // right now just using the 3 above.
+    titleFourSize: 18px,
+    titleFourWeight: 500,
+    titleFourLineHeight: 1.2,
+
+    titleFiveSize: 16px,
+    titleFiveWeight: 500,
+    titleFiveLineHeight: 1.2,
+
+    titleSixSize: 14px,
+    titleSixWeight: 500,
+    titleSixLineHeight: 1.2,
+
+    typeFontFamily: Proxima Nova,
+    typeLarge: 18px,
+    typeMedium: 16px,
+    typeSmall: 14px,
+    typeXSmall: 12px,
+    typeMicro: 10px,
+
+    typeFontWeight: 300,
+
+    typeLetterSpacing: .5,
+    typeLineHeight: 1.4,
+    typeWordSpacing: .1em,
+  ),
+  buttons: (
+    buttonBorderRadius: 18px,
+    buttonLineHeight: 13px,
+    buttonHeight:36px,
+    buttonWidth: auto,
+  
+    buttonBackgroundColor: #ffffff,
+    buttonBorderColor: #007856,
+    buttonBorderWeight: 2px,
+    buttonBorderStyle: solid,
+
+    buttonPaddingTop: 12px,
+    buttonPaddingBottom: 12px,
+    buttonPaddingLeft: 12px,
+    buttonPaddingRight: 12px,
+
+    buttonTextColor: #007856,
+    buttonTextAlignment: center,
+    buttonTextStyle: none,
+    buttonLetterSpacing: auto,
+
+  
+    buttonFontSize: 16px,
+    buttonFontFamily: Proxima Nova,
+    buttonFontWeight: 500,
+
+    buttonHoverColor:#c53e0d,
+
+    buttonPrimaryBackgroundColor: #425968,
+    buttonPrimaryBorderColor: #425968,
+    buttonPrimaryBorderWeight: 1px,
+    buttonPrimaryBorderStyle: solid,
+    buttonPrimaryTextColor: #ffffff,
+    buttonPrimaryTextStyle: none,
+
+    buttonSecondaryBackgroundColor: #ffffff,
+    buttonSecondaryBorderColor: #adb8bf,
+    buttonSecondaryBorderWeight: 1px,
+    buttonSecondaryBorderStyle: solid,
+    buttonSecondaryTextColor: #425968,
+    buttonSecondaryTextStyle: none,
+
+    buttonSubtleBackgroundColor: #ffffff,
+    buttonSubtleBorderColor: #adb8bf,
+    buttonSubtleBorderWeight: 1px,
+    buttonSubtleBorderStyle: solid,
+    buttonSubtleTextColor: #425968,
+    buttonSubtleTextStyle: none,
+
+  ),
+
+  links: (
+    linkColor: #425968,
+    linkFontFamily: Proxima Nova,
+    linkTextDecoration: none,
+    linkTextDecorationStyle: solid,
+    linkTextSize: 14px,
+  ),
+  lists: (
+    listColor: #425968,
+    listTypeFontFamily: Proxima Nova,
+    listTypeScale: 14px,
+    listFontStyle: normal,
+    listFontWeight: auto,
+    listMarginBottom: inherit
+  ),
+  paragraphs: (
+    paragraphLineHeight: auto
+  ),
+  selects: (
+    selectTypeFontFamily: Proxima Nova,
+    selectFontSize: 16px,
+    selectBorderColor: #adb8bf,
+    selectBorderRadius: 14px,
+    selectFontWeight: normal,
+    selectColor: #425968,
+    selectHeight: 35px,
+    selectPaddingTop: 4px,
+    selectPaddingRight: 14px,
+    selectPaddingBottom: 4px,
+    selectPaddingLeft: 14px,
+    selectColorHover: #c53e0d
+  ),
+  textFields : (
+    textFiledBorderRadius: 5px,
+    textFieldColor: #425968,
+    textFieldTypeFontFamily: Proxima Nova,
+    textFieldFontSize: 12px,
+    textFieldFontWeight: 400
+),
+labels: (
+  labelFontFamily: Proxima Nova,
+  labelMarginBottom:  4px,
+),
+
+textContent: (
+  textContentLineHeight: auto,
+  textContentLetterSpacing: auto,
+),
+textContentAttention: (
+  textContentAttentionLineHeight: auto,
+  textContentAttentionLetterSpacing: auto,
+),
+textContentSubtle: (
+  textContentSubtleLineHeight: auto,
+  textContentSubtleLetterSpacing: auto,
+),
+textContentDisclaimer: (
+  textContentDisclaimerLineHeight: auto,
+  textContentDisclaimerLetterSpacing: auto,
+),
+
+  // t7 icon sizes
+  icons: (
+    smallIcon: 16px,
+    mediumIcon: 24px,
+    largeIcon: 30px,
+    extraLargeIcon: 48px
+  ),
+  breakpoints: (
+    mobileBreakpoint: 480px,
+    desktopBreakpoint: 1024px
+  )
+);

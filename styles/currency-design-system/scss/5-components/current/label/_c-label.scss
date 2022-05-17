@@ -1,0 +1,9 @@
+@import 'var-label';
+
+.c-label {
+  @include proto-label();
+
+  &--action {
+    // Shows action on right hand side
+  }
+}

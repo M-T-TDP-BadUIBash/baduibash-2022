@@ -1,0 +1,84 @@
+@import 'var-accordion';
+
+.c-accordion {
+    background-color: $accordionBackgroundColor;
+    border: $accordionBorderSize $accordionBorderStyle $accordionBorderColor;
+    border-radius: $accordionBorderRadius;
+    width: 100%;
+    
+    &__header {
+        
+        &-title {
+            @include proto-type();
+            color: $accordionTitleFontColor;
+            cursor: pointer;
+            font-family: $accordionTitleFontFamily;
+            font-size: $accordionTitleFontSize;
+            font-weight: $accordionTitleFontWeight;
+            
+            &--open {
+                color: $accordionTitleOpenFontColor;
+            }
+        }
+        
+        &-button {
+            align-items: $accordionButtonAlignItems;
+            background-color: transparent;
+            border: none;
+            @include flexbox();
+            font-family: $accordionButtonFontFamily;
+            padding: $accordionButtonPadding;
+            width: 100%;
+        }
+        
+        &-icon {
+            color: $accordionIconFillColor;
+            font-size: $accordionIconSize;
+            
+            &-container {
+                @include prefixer(box-sizing, border-box);
+                display: inline-block;
+                margin-left: $accordionIconContainerMarginLeft;
+            }
+        }
+    }
+    
+    &__closed {
+        max-height: 0;
+        overflow: hidden;
+        position: relative;
+        transition: max-height 0.3s ease-in-out;
+        width: 100%;
+    }
+    
+    &__open {
+        max-height: $accordionOpenMaxHeight;
+    }
+    
+    &__content {
+        font-family: $accordionContentFontFamily;
+        padding: $accordionContentPadding;
+    }
+    
+    // accordion group container
+    &-group {
+        width: $accordionGroupWidth;
+
+        // Target only accordion elements inside group and remove its bottom border and corners
+        .c-accordion {
+          border-bottom: $accordionGroupBorderBottom;
+          border-radius: $accordionGroupBorderRadius;
+
+          // Remove bottom corners from the first item
+          &:first-child {
+            @include prefixer(border-radius, $accordionGroupFirstChildBorderRadius);
+          }
+
+          // Remove top corners from the top item and return its bottom border
+          &:last-child {
+            @include prefixer(border-radius, $accordionGroupLastChildBorderRadius);
+            border-bottom: $accordionGroupLastChildBorderSize $accordionGroupLastChildBorderStyle $accordionGroupLastChildBorderColor;
+          }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+.u-bg {
+
+    @each $color,
+    $var in $colors {
+        &--#{$color} {
+            background-color: $var;
+        }
+    }
+
+    &--gradient {
+        &-primary-base {
+            background: linear-gradient(0deg, #18864A 0%, #007856 100%);
+        }
+
+        &-gray-lighter {
+            background: linear-gradient(0deg, #D7D7D7 0%, #EFEFEF 100%);
+        }
+    }
+
+    &--transparent {
+        &-black-15 {
+            background-color: rgba($colorBlack, .15);
+        }
+
+        &-black-25 {
+            background-color: rgba($colorBlack, .25);
+        }
+
+        &-primary-base-85 {
+            background-color: rgba($colorPrimaryBase, .85);
+        }
+    }
+}

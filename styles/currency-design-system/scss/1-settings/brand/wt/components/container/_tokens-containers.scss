@@ -1,0 +1,16 @@
+$wt-container-tokens: (
+    containerBorderColor: $colorGrayscaleGrayBase,
+    containerMaxWidth: 1920px,
+    containerBorderSize: 1px,
+    containerBorderStyle: solid,
+    containerBorderRadius: 2px,
+    containerDisplay: block,
+    containerWidth: 100%,
+    containerPadding: $spacingMedium,
+    containerLayoutDisplay: flex,
+    containerLayoutFlexDirection: column,
+    containerLayoutHeight: 1px,
+    containerLayoutMinHeight: 100vh,
+    containerLayoutContentFlex: 1 0 auto,
+    containerLayoutFooterFlexShrink: 0
+  );

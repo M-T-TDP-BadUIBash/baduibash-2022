@@ -1,0 +1,35 @@
+@mixin proto-progress-bar {
+    display: flex;
+       
+    /* IE EDGE  and FIREFOX*/
+    progress {
+        /* RESETS */
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: none;
+        color: $progressBarProgressColor;     
+        background: none;
+        margin-left: $progressBarProgressMarginLeft;
+    }
+
+    /* WEBKIT BROWSERS - CHROME, OPERA AND SAFARI */
+    progress::-webkit-progress-bar {
+        background: $progressBarBackground;
+    }
+
+    progress::-webkit-progress-value {
+        background: $progressBarProgressValueBackground;
+        
+    }
+
+    /* MOZILLA FIREFOX */
+    progress::-moz-progress-bar {
+        background: $progressBarProgressValueBackground;
+    }
+
+    /*IE */
+    progress::-ms-fill {
+        border: $progressBarMsFillBorder;
+    }
+}

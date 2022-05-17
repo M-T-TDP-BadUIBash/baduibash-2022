@@ -1,0 +1,16 @@
+$_gutter-width: $spacingMedium;
+$_outer-margin: ($spacingMedium * 0.5);
+$_gutter-compensation: ($_gutter-width * 0.5) * -1;
+$_half-gutter-width: $_gutter-width * 0.5;
+$_xs-min: 30;
+$_sm-min: 48;
+$_md-min: 64;
+$_lg-min: 75;
+$_breakpoint--xs-min: $_xs-min+em;
+$_breakpoint--sm-min: $_sm-min+em;
+$_breakpoint--md-min: $_md-min+em;
+$_breakpoint--lg-min: $_lg-min+em;
+$_container-sm: $_sm-min + $_gutter-width;
+$_container-md: $_md-min + $_gutter-width;
+$_container-lg: $_lg-min + $_gutter-width;
+

@@ -1,0 +1,40 @@
+@import  
+        '../wt/breakpoints/var-breakpoints',  // Breakpoint Values
+        '../wt/paragraphs/var-paragraphs',   // Paragraph Values        
+        '../wt/icons/var-icons',   // Icons
+        '../wt/icons/var-icons-mixins',   // Icon Mixins
+        '../wt/components/arrow/var-arrow',
+        '../wt/components/groupgrid/var-groupgrid', //group grid values
+        '../wt/components/date-select/var-date-selects',  // Date Select Values
+        '../wt/components/formalert/var-formalert', //Form Alert Values
+        '../wt/components/grid/var-grid', // Grid values
+        '../wt/components/nav/var-nav', //Nav Values
+        '../wt/components/gridfilter/var-gridfilter', //gridFilter Values
+        '../wt/components/dropdown/var-dropdown', //Dropdown Values       
+        '../wt/components/flyoutMenu/var-flyoutMenu', //FlyoutMenu Values
+        '../wt/components/chart/var-chart', // Chart Values
+        '../wt/components/chartGrid/var-chartGrid', //ChartGrid Values
+        '../wt/components/search/var-search', //Search Values
+        '../wt/components/banner/var-banner', //Banner Values
+        '../wt/components/linkList/var-linkList', //linkList Values
+        '../wt/components/modal/var-modalComponent', //Modal Component Values
+        '../wt/components/panel/var-panel', //panel Values
+        '../wt/components/scrollableContainer/var-scrollableContainer' , //Scroll Container values
+        '../wt/components/small-buttons/var-small-buttons', //Small Buttons Values
+        '../wt/components/container/var-containers',  // Container Values
+        '../wt/components/cards/var-cards',     //Card Values
+        '../wt/components/load-more/var-load-more',     //Load More Values
+        '../wt/components/toggle/var-toggle', //toggle Values
+        '../wt/components/tooltips/var-tooltips', //tooltip Values
+        '../wt/components/sidenav/var-sidenav' , //sidenav Values
+        '../wt/components/spinner/var-spinner', //Spinner Values
+        '../wt/components/password/var-password', //Password Values
+        '../wt/components/progress-bar/var-progress-bar', //Progress Bar
+        '../wt/patterns/action-groups/var-action-groups',  // action group Values
+        '../wt/patterns/list-action/var-list-action',  // list-action
+        '../wt/patterns/menu/var-menu', //Menu Values
+        '../wt/patterns/modal/var-modal',     //Modal Values
+        '../wt/patterns/review-input/var-review-inputs',     //Review Input Values
+        '../wt/patterns/header/var-header',  // Header Values
+        '../wt/patterns/footer/var-footer' ,  // Footer Values
+        '../wt/boolean/var-boolean'; //Used for if statements in scss

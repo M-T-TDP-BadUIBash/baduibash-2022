@@ -1,0 +1,44 @@
+.c-text-field, .c-text-input {
+  @include proto-text-field();
+
+  @include placeholder() {
+    color: $textFieldInputFontColor;
+    position: $textFieldPosition;
+  }
+  &--disabled {
+    @include proto-text-field();
+    background-color: $textFieldDisabledBackgroundColor;
+    color: $textFieldDisabledTextColor;
+    border-color: $textFieldDisabledBorderColor;
+    cursor: $textFieldDisabledCursor;
+  }
+  &:focus {
+    //Dont mess with default focus states; users who need it expect the default
+    box-shadow: $textFieldFocusBoxShadow;
+
+  }
+
+  &--number {
+  //  Number Specific Text Input
+  }
+
+  @include placeholder() {
+    color: $textFieldPlaceholderFontColor;
+  }
+
+  &--prefixed {
+  //  Adds a symbol in front of the text
+  }
+
+  &--multiline {
+  //  Used for Text areas
+  }
+
+  &__sub-label {
+  }
+
+  &--error {
+    border: $textFieldErrorBorderSize $textFieldErrorBorderStyle $textFieldErrorBorderColor;
+    color: $textFieldErrorInputColor;
+    }
+}

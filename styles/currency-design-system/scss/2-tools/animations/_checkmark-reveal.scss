@@ -1,0 +1,83 @@
+@-webkit-keyframes checkmark-reveal{
+    0%{
+        width: 0;
+        height: 0;
+        border-color: rgba(122,184,0,100);
+        -webkit-transform: translate3d(0,0,0) rotate(45deg);
+        transform: translate3d(0,0,0) rotate(45deg);
+    }
+
+    33%{
+        width: 8px;
+        height: 0;
+        -webkit-transform: translate3d(0,0,0) rotate(45deg);
+        transform: translate3d(0,0,0) rotate(45deg);
+    }
+
+    100%{    
+        width: 8px;
+        height: 16px;    
+        border-color: rgba(122,184,0,100);
+        -webkit-transform: translate3d(0,-16px,0) rotate(45deg);
+        transform: translate3d(0,-16px,0) rotate(45deg);
+    }
+}
+
+@-moz-keyframes checkmark-reveal{
+    0%{
+        width: 0;
+        height: 0;
+        border-color: rgba(122,184,0,100);
+        -moz-transform: translate3d(0,0,0) rotate(45deg);
+        transform: translate3d(0,0,0) rotate(45deg);
+    }
+
+    33%{
+        width: 8px;
+        height: 0;
+        -moz-transform: translate3d(0,0,0) rotate(45deg);
+        transform: translate3d(0,0,0) rotate(45deg);
+    }
+
+    100%{    
+        width: 8px;
+        height: 16px;    
+        border-color: rgba(122,184,0,100);
+        -moz-transform: translate3d(0,-16px,0) rotate(45deg);
+        transform: translate3d(0,-16px,0) rotate(45deg);
+    }
+}
+
+@keyframes checkmark-reveal{
+    0%{
+        width: 0;
+        height: 0;
+        border-color: rgba(122,184,0,100);
+        -webkit-transform: translate3d(0,0,0) rotate(45deg);
+        -moz-transform: translate3d(0,0,0) rotate(45deg);
+        -ms-transform: translate3d(0,0,0) rotate(45deg);
+        -o-transform: translate3d(0,0,0) rotate(45deg);
+        transform: translate3d(0,0,0) rotate(45deg);
+    }
+
+    33%{
+        width: 8px;
+        height: 0;
+        -webkit-transform: translate3d(0,0,0) rotate(45deg);
+        -moz-transform: translate3d(0,0,0) rotate(45deg);
+        -ms-transform: translate3d(0,0,0) rotate(45deg);
+        -o-transform: translate3d(0,0,0) rotate(45deg);
+        transform: translate3d(0,0,0) rotate(45deg);
+    }
+
+    100%{    
+        width: 8px;
+        height: 16px;    
+        border-color: rgba(122,184,0,100);
+        -webkit-transform: translate3d(0,-16px,0) rotate(45deg);
+        -moz-transform: translate3d(0,-16px,0) rotate(45deg);
+        -ms-transform: translate3d(0,-16px,0) rotate(45deg);
+        -o-transform: translate3d(0,-16px,0) rotate(45deg);
+        transform: translate3d(0,-16px,0) rotate(45deg);
+    }
+}

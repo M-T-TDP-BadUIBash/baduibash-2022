@@ -1,0 +1,17 @@
+// Default loadMore
+$mtb-load-more-tokens: (
+    loadMoreBackgroundColor: $colorWhite,
+    loadMoreBorderColor: $colorPrimaryBase,
+    loadMoreBorderWeight: 2px,
+    loadMoreBorderStyle: solid,
+    loadMoreTextColor: $colorPrimaryBase,
+    loadMoreLoadingFontColor: $colorPrimaryBase,
+    loadMoreAutoLoadFontColor: $colorPrimaryBase,
+    loadMoreDisabledBackgroundColor: $colorGrayBase,
+    loadMoreDisabledBorderColor: $colorGrayBase,
+    loadMoreDisabledFontColor: $colorWhite,
+    loadMoreDisabledHoverBackgroundColor: $colorGrayBase,
+    loadMoreDisabledHoverBorderColor: $colorGrayBase,
+    loadMoreDisabledHoverFontColor: $colorWhite,
+    loadMoreDarkenValue: 5%,
+  );

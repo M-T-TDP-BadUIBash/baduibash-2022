@@ -1,0 +1,89 @@
+$colors: ();
+
+@if $isMTB==true {
+  $colors: ("primary-base": $colorPrimaryBase,
+      "primary-dark": $colorPrimaryDark,
+      "primary-light": $colorPrimaryLight,
+      "secondary": $colorSecondary,
+      "green-base": $colorGreenBase,
+      "green-light": $colorGreenLight,
+      "blue-base": $colorBlueBase,
+      "blue-light": $colorBlueLight,
+      "blue-dark": $colorBlueDark,
+      "red-base": $colorRedBase,
+      "red-light": $colorRedLight,
+      "yellow-base": $colorYellowBase,
+      "yellow-light": $colorYellowLight,
+      "orange-base": $colorOrangeBase,
+      "orange-light": $colorOrangeLight,
+      "gray-base": $colorGrayBase,
+      "gray-dark": $colorGrayDark,
+      "gray-darker": $colorGrayDarker,
+      "gray-light": $colorGrayLight,
+      "gray-lighter": $colorGrayLighter,
+      "white": $colorWhite,
+      "black": $colorBlack);
+
+  .u-color {
+
+    @each $color,
+    $val in $colors {
+      &--#{$color} {
+        color: $val !important;
+      }
+    }
+  }
+}
+
+@if $isWTC==true {
+  $colors: ("primary-base": $colorPrimaryBase,
+      "primary-light": $colorPrimaryLight,
+      "secondary-light": $colorSecondaryLight,
+      "secondary-base": $colorSecondaryBase,
+      "secondary-cream": $colorSecondaryCream,
+      "gray-base": $colorGrayBase,
+      "gray-light": $colorGrayLight,
+      "gray-lighter": $colorGrayLighter,
+      "semantic-red-base": $colorSemanticRedBase,
+      "semantic-green-base": $colorSemanticGreenBase,
+      "semantic-orange-base": $colorSemanticOrangeBase,
+      "graphic-orange-light": $colorGraphicOrangeLight,
+      "graphic-purple-base": $colorGraphicPurpleBase,
+      "graphic-purple-light": $colorGraphicPurpleLight,
+      "graphic-violet-base": $colorGraphicVioletBase,
+      "graphic-violet-light": $colorGraphicVioletLight,
+      "graphic-pink-base": $colorGraphicPinkBase,
+      "graphic-pink-light": $colorGraphicPinkLight,
+      "graphic-olive-base": $colorGraphicOliveBase,
+      "graphic-olive-light": $colorGraphicOliveLight,
+      "graphic-green-base": $colorGraphicGreenBase,
+      "graphic-green-light": $colorGraphicGreenLight,
+      "graphic-blue-base": $colorGraphicBlueBase,
+      "graphic-blue-light": $colorGraphicBlueLight,
+      "white": $colorWhite,
+      "black": $colorBlack,
+
+      "secondary-blue-base": $colorSecondaryBlueBase,
+      "semantic-green-light": $colorSemanticGreenLight,
+      "semantic-orange-light": $colorSemanticOrangeLight,
+      "semantic-red-light": $colorSemanticRedLight,
+      "grayscale-gray-base": $colorGrayscaleGrayBase,
+      "grayscale-gray-light": $colorGrayscaleGrayLight,
+      "grayscale-gray-lighter": $colorGrayscaleGrayLighter,
+      "grayscale-gray-dark": $colorGrayscaleGrayDark,
+      //"grayscale-gray-darker": $colorGrayscaleGrayDarker,
+      "grayscale-gray-black": $colorGrayscaleBlack,
+      "grayscale-gray-white": $colorGrayscaleWhite,
+      "grayscale-gray-white-dark": $colorGrayscaleWhiteDark
+
+  );
+  .u-color {
+
+    @each $color,
+    $val in $colors {
+      &--#{$color} {
+        color: $val !important;
+      }
+    }
+  }
+}

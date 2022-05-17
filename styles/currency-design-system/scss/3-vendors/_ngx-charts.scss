@@ -1,0 +1,14 @@
+  .ngx-charts-tooltip-content {
+    &.type-tooltip {
+      background: $colorPrimaryBase !important;
+      padding: $spacingSmall;
+      font-family: $fontFace;
+      display: inline-block;
+
+      .tooltip-caret.position-top { 
+        border-top: 5px solid $colorPrimaryBase !important;
+        border-left: 5px solid transparent !important;
+        border-right: 5px solid transparent !important;
+      }
+    }
+  }

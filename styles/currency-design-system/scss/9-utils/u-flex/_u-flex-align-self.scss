@@ -1,0 +1,20 @@
+.u-flex {
+   &-align-self {
+
+     &--top {
+       align-self: start;
+     }
+
+     &--middle {
+       align-self: center;
+     }
+
+     &--bottom {
+       align-self: flex-end;
+     }
+
+     &--stretch {
+       align-self: center;
+     }
+   }
+}

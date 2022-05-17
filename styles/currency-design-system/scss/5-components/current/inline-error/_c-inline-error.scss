@@ -1,0 +1,56 @@
+.c-inline-error {
+  background-color: $inlineErrorBackgroundColor;
+  font-family: quote($string: $inlineErrorFontFamily);
+  font-size: $inlineErrorFontSize;
+  font-weight: $inlineErrorFontWeight;
+  line-height: $notificationLineHeight;
+  color: $inlineErrorFontColor;
+  padding: $inlineErrorPadding;
+    
+  @if $isMTB == true {
+    &--warning {
+      background-color: $inlineErrorWarningBackgroundColor;
+      font-family: quote($string: $inlineErrorFontFamily);
+      font-size: $inlineErrorFontSize;
+      font-weight: $inlineErrorFontWeight;
+      line-height: $notificationLineHeight;
+      color: $inlineErrorFontColor;
+      padding: $inlineErrorPadding;
+        
+      @include flexbox();
+    }
+  }
+    
+  @include flexbox();
+  &__icon {
+    align-self: $notificationAlignSelf;
+    @if $isMTB == true {
+        color: $inlineErrorIconColor;
+        font-size: $inlineErrorIconFontSize;
+        
+        &--warning {
+            align-self: $notificationAlignSelf;
+            color: $inlineErrorWarningIconColor;
+            font-size: $inlineErrorIconFontSize;
+        }
+    }
+  }
+
+  &__content {
+    align-self: center;
+    padding-left: $inlineErrorContentPaddingLeft;    
+  }
+  &__input {
+    border: $inlineErrorBorderSize $notificationBorderStyle $inlineErrorInputBorderColor;
+    color: $inlineErrorInputColor;
+      
+      @if $isMTB == true {
+        border: $inlineErrorBorderSize $notificationBorderStyle $inlineErrorInputBorderColor !important;
+
+        &--warning {
+            border: $inlineErrorBorderSize $notificationBorderStyle $inlineErrorWarningInputBorderColor;
+            color: $inlineErrorInputColor;
+        }
+      }
+  }
+}

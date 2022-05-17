@@ -1,0 +1,68 @@
+$fontFace: "MTB Balto Web";
+$fontType: (
+      "eot",
+      "woff"
+    );
+$fontFileNameThin:  "mandtbaltoweb-semilight";
+$fontFileNameThinItalic:  "mandtbaltoweb-semilightitalic";
+
+$fontFileNameNormal: "mandtbaltoweb-book";
+$fontFileNameNormalItalic: "mandtbaltoweb-bookitalic";
+
+$fontFileNameBold: "mandtbaltoweb-medium"; 
+$fontFileNameBoldItalic: "mandtbaltoweb-mediumitalic";
+
+// Mixin Generates Font Family Tags
+@mixin font-face($family, $style, $weight, $src, $path) {
+    @font-face {
+        font-family: quote($family);
+        font-style: $style;
+        font-weight: $weight;
+
+        @if ($src == woff) {
+            src: url(quote($path + '.woff'));
+        }
+        @if ($src == eot) {
+            src: url(quote($path + '.eot'));
+        }
+    }
+}
+
+@each $type in $fontType {
+    @include font-face(quote($fontFace), normal, 200, $type, quote($_localFontPath + $fontFileNameThin));
+    @include font-face(quote($fontFace), italic, 200, $type, quote($_localFontPath + $fontFileNameThinItalic));
+
+    @include font-face(quote($fontFace), normal, normal, $type, quote($_localFontPath + $fontFileNameNormal));
+    @include font-face(quote($fontFace), italic, normal, $type, quote($_localFontPath + $fontFileNameNormalItalic));
+
+    @include font-face(quote($fontFace), normal, 500, $type, quote($_localFontPath + $fontFileNameBold));
+    @include font-face(quote($fontFace), italic, 500, $type, quote($_localFontPath + $fontFileNameBoldItalic));
+}
+
+$icon-font-path:        $_localFontPath;
+$icon-background-color: #eee !default;
+$icon-li-margin-right:  0.4em !default;
+
+@font-face {
+    font-family: 'Nucleo';
+    src: url('#{$icon-font-path}/Nucleo.eot');
+    src: url('#{$icon-font-path}/Nucleo.eot') format('embedded-opentype'),
+      url('#{$icon-font-path}/Nucleo.woff2') format('woff2'),
+      url('#{$icon-font-path}/Nucleo.woff') format('woff'),
+      url('#{$icon-font-path}/Nucleo.ttf') format('truetype'),
+      url('#{$icon-font-path}/Nucleo.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+// Generate the Variables Based on the Theme
+$typeScaleXXSmall: 10px;
+$typeScaleXSmall: 12px;
+$typeScaleSmall: 14px;
+$typeScaleMedium: 16px;
+$typeScaleLarge: 18px;
+$typeScaleXLarge: 24px;
+$typeScaleXXLarge: 32px;
+$typeScaleXXXLarge: 44px;
+$typeLineHeightIncrement: 4px;
+//t7 added
+$typeScaleXXXXLarge: 44px;

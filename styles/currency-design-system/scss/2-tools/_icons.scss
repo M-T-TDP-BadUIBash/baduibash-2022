@@ -1,0 +1,52 @@
+$data-svg-prefix: 'data:image/svg+xml,';
+
+
+$icons: (
+    'bell':         "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='%%VIEWBOXMINX%% %%VIEWBOXMINY%% %%VIEWBOXWIDTH%% %%VIEWBOXHEIGHT%%' width='%%VIEWBOXWIDTH%%' height='%%VIEWBOXHEIGHT%%' role='img'%3E%3Ctitle%3EBell%3C/title%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath stroke='%%COLOR%%' stroke-linecap='square' d='M17.895 12.526v-4.21a5.895 5.895 0 0 0-11.79 0v4.21a11.65 11.65 0 0 1-1.684 5.895H19.58a11.65 11.65 0 0 1-1.684-5.895z' /%3E%3Cpath fill='%%COLOR%%' fill-rule='nonzero' d='M9.62 20.105a2.526 2.526 0 0 0 4.76 0H9.62z' /%3E%3C/g%3E%3C/svg%3E",
+    'chat':         "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='%%VIEWBOXMINX%% %%VIEWBOXMINY%% %%VIEWBOXWIDTH%% %%VIEWBOXHEIGHT%%' width='%%VIEWBOXWIDTH%%' height='%%VIEWBOXHEIGHT%%' role='img'%3E%3Ctitle%3EChat%3C/title%3E%3Cpath fill='%%COLOR%%' d='M20.574 3.426H3.426v12.861h4.287v4.287h.127l4.287-4.287h8.447V3.426zM22 2v15.713h-9.287L8.426 22H6.287v-4.287H2V2h20z' /%3E%3C/svg%3E",
+    'chevron-down': "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='%%VIEWBOXMINX%% %%VIEWBOXMINY%% %%VIEWBOXWIDTH%% %%VIEWBOXHEIGHT%%' width='%%VIEWBOXWIDTH%%' height='%%VIEWBOXHEIGHT%%'%3E%3Ctitle%3EArrowWithoutTailDown%3C/title%3E%3Cg fill='#007856'%3E%3Cpolyline fill='none' stroke='%%COLOR%%' stroke-width='2' stroke-linecap='square' stroke-miterlimit='10' points='2,7 12,17 22,7 ' transform='translate(0, 0)' stroke-linejoin='miter'%3E%3C/polyline%3E%3C/g%3E%3C/svg%3E",
+    'close':        "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='%%VIEWBOXMINX%% %%VIEWBOXMINY%% %%VIEWBOXWIDTH%% %%VIEWBOXHEIGHT%%' width='%%VIEWBOXWIDTH%%' height='%%VIEWBOXHEIGHT%%' role='img'%3E%3Ctitle%3EClose%3C/title%3E%3Cpath fill='%%COLOR%%' d='M20 4.86L12.86 12 20 19.14l-.86.86L12 12.86 4.86 20 4 19.14 11.14 12 4 4.86 4.86 4 12 11.14 19.14 4z' /%3E%3C/svg%3E",
+    'menu-toggle':  "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='%%VIEWBOXMINX%% %%VIEWBOXMINY%% %%VIEWBOXWIDTH%% %%VIEWBOXHEIGHT%%' width='%%VIEWBOXWIDTH%%' height='%%VIEWBOXHEIGHT%%' role='img'%3E%3Ctitle%3EMenu Toggle%3C/title%3E%3Cpath fill='%%COLOR%%' d='M3.787 7.713a1.788 1.788 0 0 1 0-3.574h16.426a1.788 1.788 0 0 1 0 3.574H3.787zm16.426 2.5a1.788 1.788 0 0 1 0 3.574H3.787a1.788 1.788 0 0 1 0-3.574h16.426zm0 6.074a1.788 1.788 0 0 1 0 3.574H3.787a1.788 1.788 0 0 1 0-3.574h16.426z' /%3E%3C/svg%3E",
+    'sign-out':     "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='%%VIEWBOXMINX%% %%VIEWBOXMINY%% %%VIEWBOXWIDTH%% %%VIEWBOXHEIGHT%%' width='%%VIEWBOXWIDTH%%' height='%%VIEWBOXHEIGHT%%' role='img'%3E%3Ctitle%3ESign Out%3C/title%3E%3Cg fill='none' fill-rule='evenodd' stroke='%%COLOR%%'%3E%3Cpath d='M8 15.364C9.273 17.545 11.636 19 14.273 19c4 0 7.272-3.273 7.272-7.273 0-4-3.272-7.272-7.272-7.272-2.728 0-5 1.454-6.273 3.636m7.182 3.636H2.455' /%3E%3Cpath stroke-linecap='square' d='M5.182 14.455l-2.727-2.728L5.182 9' /%3E%3C/g%3E%3C/svg%3",
+    'user-avatar':  "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='%%VIEWBOXMINX%% %%VIEWBOXMINY%% %%VIEWBOXWIDTH%% %%VIEWBOXHEIGHT%%' width='%%VIEWBOXWIDTH%%' height='%%VIEWBOXHEIGHT%%' role='img'%3E%3Ctitle%3EUser Avatar%3C/title%3E%3Cg fill='none' fill-rule='evenodd' stroke='%%COLOR%%' stroke-linecap='round' stroke-linejoin='round' transform='translate(2 2)'%3E%3Ccircle cx='10' cy='7.5' r='3.125' /%3E%3Cpath d='M16.191 17.026a6.864 6.864 0 0 0-12.382 0' /%3E%3Ccircle cx='10' cy='10' r='9.375' /%3E%3C/g%3E%3C/svg%3E"
+);
+
+@function str-replace( $string, $search, $replace: '' ) {
+
+    $index: str-index( $string, $search );
+
+    @if $index {
+        @return str-slice( $string, 1, $index - 1 ) + $replace + str-replace( str-slice( $string, $index + str-length( $search ) ), $search, $replace);
+    }
+
+    @return $string;
+}
+
+// min-x, min-y, width and height
+
+@function get-icon( $icon, $color: $colorWhite, $viewBoxWidth: '24', $viewBoxHeight: '24', $viewBoxMinX: '0', $viewBoxMinY: '0' ) {
+
+    @if 'color' != type-of( $color ) {
+
+        @warn 'The requested color - "' + $color + '" - was not recognized as a Sass color value.';
+        @return null;
+    }
+
+    @if map-has-key( $icons, $icon ) {
+
+        $icon:        map-get( $icons, $icon );
+        $placeholder: '%%COLOR%%';
+        $data-uri:    str-replace( url( $data-svg-prefix + $icon ), $placeholder, $color );
+        $data-uri-replace-viewBoxWidth: str-replace( $data-uri, '%%VIEWBOXWIDTH%%', $viewBoxWidth );
+        $data-uri-replace-viewBoxHeight: str-replace( $data-uri-replace-viewBoxWidth, '%%VIEWBOXHEIGHT%%', $viewBoxHeight );
+        $data-uri-replace-viewBoxMinX: str-replace( $data-uri-replace-viewBoxHeight, '%%VIEWBOXMINX%%', $viewBoxMinX );
+        $data-uri-replace-viewBoxMinY: str-replace( $data-uri-replace-viewBoxMinX, '%%VIEWBOXMINY%%', $viewBoxMinY );
+
+        @return str-replace( $data-uri-replace-viewBoxMinY, '#', '%23' );
+    }
+
+    @warn 'The requested icon - "' + $icon + '" - is not defined in the $icons map.';
+    @return null;
+}
+
+

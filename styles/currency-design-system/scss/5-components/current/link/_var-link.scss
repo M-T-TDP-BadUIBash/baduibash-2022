@@ -1,0 +1,52 @@
+$linkFontColor: $colorPrimaryBase;
+$linkFontFamily: $typeFontFamily;
+$linkTextDecoration: underline;
+$linkTextDecorationStyle: solid;
+$linkHoverTextDecoration: none;
+$linkHoverTextDecorationStyle: none;
+$linkFontWeight: $typeFontWeight;
+$linkBackgroundColor: transparent;
+$linkBorder: 0;
+$linkCursor: pointer;
+$linkDisplay: inline-block;
+$linkFontStretch: normal;
+$linkFontStyle: normal;
+$linkLetterSpacing: inherit;
+$linkLineHeight: 1.5;
+$linkMargin: 0;
+$linkPadding: 0;
+$linkTextAlign: left;
+$linkTextTransform: none;
+$linkVerticalAlign: baseline;
+$linkDarkenValue: 5%;
+$linkHoverDecoration: none;
+$linkFontSize: $typeScaleMedium;
+$linkFontSizeInherit: inherit;
+
+$iconLinkFontColor: $linkFontColor;
+$iconLinkFontSize: $typeScaleXSmall; //12px
+$iconLinkIconSize: 16px;
+$iconLinkIconMarginRight: $spacingXXSmall;
+$iconLinkOffset: 4px;
+
+$iconLinkSmallFontSize: 16px;
+$iconLinkSmallIconSize: 24px;
+$iconLinkSmallOffset: 6px;
+
+$iconLinkMediumFontSize: 24px;
+$iconLinkMediumIconSize: 36px;
+$iconLinkMediumOffset: 10px;
+
+$iconLinkLargeFontSize: 36px;
+$iconLinkLargeIconSize: 48px;
+$iconLinkLargeOffset: 12px;
+
+@if $isWTC {
+  $iconLinkFontColor: $colorSecondaryBlueBase;
+  $iconLinkFontSize: $typeScaleXXSmall;
+  $iconLinkIconMarginRight: $spacingXXSmall;
+  $iconLinkOffset: 4px;
+  $linkFontSize: $typeScaleXXSmall;
+  $linkFontColor: $colorSecondaryBlueBase;
+  $linkFontWeight: $typeFontWeightMedium;
+}

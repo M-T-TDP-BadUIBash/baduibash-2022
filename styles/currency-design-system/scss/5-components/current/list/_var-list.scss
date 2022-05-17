@@ -1,0 +1,48 @@
+$listColor: $colorGrayDarker;
+$listFontFamily: $typeFontFamily;
+$listIconBackgroundColor: $colorPrimaryBase;
+$listMarginBottom: $spacingSmall;
+$listBorder: 0;
+$listDisplay: block;
+$listFontStyle: normal;
+$listFontWeight: $typeFontWeightLight;
+$listLineHeight: 1.5;
+$listStylePosition: outside;
+$listMargin: 0;
+$listPadding: 0 0 0 $spacingMedium;
+$listFontSize: $typeScaleMedium;
+$listTextAlign: left;
+$listTextTransform: none;
+$listVerticalAlign: baseline;
+$listWidth: 100%;
+$listItemPadding: 0;
+$listItemDisplay: list-item;
+$listOrderedListStyle: decimal;
+$listUnorderedListStyle: disc;
+$listOrderedItemMarginBottom: 0;
+$listUnorderedItemMarginBottom: $spacingMedium;
+$listIconItemMarginBottom: $spacingSmall;
+$listIconContentLineHeight: 1.3;
+$listIconContentBoldFontWeight: $typeFontWeightMedium;
+$listIconContentDisplay: inline-block;
+$listIconWidth: 35px;
+$listIconHeight: 35px;
+$listIconBorderRadius: 50%;
+$listIconDisplay: block;
+$listIconFlexGrow: 0;
+$listIconFlexShrink: 0;
+$listIconLineHeight: 35px;
+$listIconPadding: 5px;
+$listIconMarginRight: $spacingXSmall;
+$listIconTextAlign: center;
+$listIconItemAlignItems: center;
+$listIconColor: $colorWhite;
+
+@if $isWTC {
+
+    $listIconBackgroundColor: $colorSecondaryBlueBase;
+    $listMarginBottom: $spacingMedium;
+    $listIconColor: $colorGrayscaleWhite;
+    $listFontWeight: $typeFontWeightRegular;
+    
+}

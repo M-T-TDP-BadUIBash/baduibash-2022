@@ -1,0 +1,29 @@
+.c-breadcrumb, .breadcrumb {
+    ul {
+        display: flex;
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 0px;
+        align-items: center;
+    }
+
+    li {    
+        color: $breadcrumbListItemColor;
+        width: auto;
+        list-style-type: none;
+        margin-bottom: 0;
+        font-size: $breadcrumbListItemFontSize;
+        font-weight: $breadcrumbListItemFontWeight;
+
+        &:not(:last-child)::after {
+            color: $breadcrumbIconColor;
+            content: '\ea39';
+            font: normal normal normal 1em/1 'wtc';
+            margin: $breadcrumbIconMargin;
+            position: relative;
+            top: $breadcrumbIconTop;
+        }
+    }
+}

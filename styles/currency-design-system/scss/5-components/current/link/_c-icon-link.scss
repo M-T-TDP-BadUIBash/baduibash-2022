@@ -1,0 +1,15 @@
+.c-icon-link {
+    @include proto-icon-link($iconLinkFontColor, $iconLinkFontSize, $iconLinkIconSize, $iconLinkOffset);
+
+    &--small {
+        @include proto-icon-link($iconLinkFontColor, $iconLinkSmallFontSize, $iconLinkSmallIconSize, $iconLinkSmallOffset);
+    }
+
+    &--medium {
+        @include proto-icon-link($iconLinkFontColor, $iconLinkMediumFontSize, $iconLinkMediumIconSize, $iconLinkMediumOffset);
+    }
+
+    &--large {
+        @include proto-icon-link($iconLinkFontColor, $iconLinkLargeFontSize, $iconLinkLargeIconSize, $iconLinkLargeOffset);
+    }
+}

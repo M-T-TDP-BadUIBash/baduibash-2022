@@ -1,0 +1,18 @@
+.c-form-alert {
+    @if $isWTC == true {
+      padding: $formAlertPadding;
+      border: $formAlertBorderWidth $formAlertBorderType $formAlertBorderColor;
+      border-radius: $formAlertBorderRadius;
+      position: relative;
+
+      &__close {
+        background: none;
+        border: none;
+        position: absolute;
+        top: $formAlertCloseTop;
+        right: $formAlertCloseRight;
+        width: $formAlertCloseWidth;
+        height: $formAlertCloseHeight;
+      }
+    }
+}

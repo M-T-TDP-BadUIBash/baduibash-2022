@@ -1,0 +1,41 @@
+$tabDisplay: none;
+$tabBorderSize: 1px;
+$tabBorderColor: $colorGrayLight;
+$tabFontFamily: $typeFontFamily;
+$tabActiveColor: $colorPrimaryBase;
+$tabPadding: 15px 0;
+$tabFontColor: $colorGrayDark;
+$tabSizing: 2px;
+$tabBorderStyle: solid;
+$tabContainerFontSize: 0;
+$tabContainerMargin: 0;
+$tabContainerPadding: 0;
+$tabDisplayBlock: inline-block;
+$tabMargin: 0 46px -1px 0;
+$tabFontWeight: $typeFontWeightMedium;
+$tabTextAlign: center;
+$tabTextDecoration: none;
+$tabCursor: pointer;
+$tabContentFontWeight: $typeFontWeight;
+$tabContentMargin: 0;
+$tabContentPadding: 0;
+$tabFontSize: $typeScaleLarge;
+$tabLastChildMarginRight: $spacingMedium;
+$tabTriangleHeight: 10px;
+$tabTriangleTop: 36px;
+$tabGroupButtonBorderStyle: solid;
+$tabArrowPosition: absolute;
+$tabBorderPosition: relative;
+$tabArrowTransparent: transparent;
+$tabLineHeight: 22px;
+$tabActiveFontWeight: $typeFontWeightBold;
+
+@if $isWTC {
+    $tabPadding: 6px 0;
+    $tabActiveColor: $colorSecondaryBase;
+    $tabFontColor: $colorSecondaryBlueBase;
+    $tabBorderSize: 2px;
+    $tabDisplay: block;
+    $tabFontSize: $typeScaleSmall;
+}
+

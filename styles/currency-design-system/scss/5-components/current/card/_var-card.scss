@@ -1,0 +1,61 @@
+$cardBorder: 1px solid $colorGrayBase;
+$cardBorderRadius: $spacingXXSmall;
+$cardMargin: $spacingMedium;
+$cardSize: 300px;
+$cardFont: $fontFace; 
+$cardHoverColor: $colorGrayDark;
+$cardHoverDarkenValue: 5%;
+$cardBodyPadding: $spacingLarge;
+$cardBodyPaddingSmall: $spacingMedium;
+$cardBodyPaddingHero: $spacingLarge;
+$cardImageBorderRadius: $spacingXXSmall $spacingXXSmall 0 0;
+$cardImageBorderRadiusHero: 0 $spacingXXSmall $spacingXXSmall 0;
+$cardEyebrowColor: $colorGrayDark;
+$cardEyebrowFontSize: $typeScaleXSmall;
+$cardEyebrowTextTransform: uppercase;
+$cardTitleColor: $colorGrayDarker;
+$cardTitleFontWeight: $typeFontWeight;
+$cardTitleFontSize: $typeScaleXLarge;
+$cardTitleMargin: $spacingXSmall 0 $spacingXSmall 0;
+$cardTitleMarginSmall: 0 0 $spacingXSmall 0;
+$cardTitleMarginHero: $spacingXSmall 0;
+$cardTextColor: $colorGrayDarker;
+$cardTextFontSize: $typeScaleMedium;
+$cardTextFontWeight: $typeFontWeight;
+$cardTextMarginBottom: $spacingMedium;
+$cardTextLineHeight: $typeScaleXLarge;
+$cardTextColorSmall: $colorGrayDark;
+$cardTextFontSizeSmall: $typeScaleMedium;
+$cardTextFontWeightSmall: $typeFontWeight;
+$cardTextMarginBottomSmall: $spacingMedium;
+$cardTextLineHeightSmall: $typeScaleLarge;
+$cardButtonDefaultMarginTop: $spacingMedium;
+$cardButtonDefaultMarginLeftHero: $spacingMedium;
+$cardLinkMarginTop: $spacingMedium;
+$cardLinkColor: $colorPrimaryBase;
+$cardButtonDefaultMarginLeftHeroMobile: 0;
+$cardHeroMobileMaxWidth: 768px;
+$cardBorderTop: $spacingXXXSmall solid $colorGrayBase; // ??
+$cardShadowKey: 0 1px 2px rgba(0,0,0,.1);
+$cardShadowAmbient: 0 2px 4px rgba(0,0,0,.1);
+
+@if $isMTB {
+    $cardBorderTop: $spacingXXXSmall solid $colorYellowBase;
+}
+
+//WTC Only
+$cardItemBorderRadius: 5px;
+$cardItemCursor: pointer;
+$cardItemTitlePaddingBottom: $spacingSmall;
+$cardContentNameBorderRightWidth: 1px;
+$cardContentNameBorderRightType: solid;
+$cardContentNameBorderRightColor: #e0e9ed;
+$cardItemItemPadding: $spacingSmall;
+$cardMediaPaddingHeight: $spacingMedium;
+$cardMediaPaddingWidth: $spacingSmall;
+$cardMediaMenuTop: 8px;
+$cardMediaMenuRight: 8px;
+
+
+
+

@@ -1,0 +1,193 @@
+.c-chart-grid {
+    @if $isWTC == true {
+      &.ag-theme-balham {
+
+        // these styles apply all over the grid
+        & * {
+          font-family: $fontFace;
+          line-height: normal;
+        }
+
+        // removes border around entire grid
+        .ag-root {
+          border: none;
+        }
+
+        /* removes border in header columns */
+        .ag-header-cell::after,
+        .ag-header-group-cell::after {
+          border-right: none;
+        }
+
+        // header background color
+        .ag-header {
+          background-color: $chartGridHeaderBgColor;
+          color: $chartGridHeaderColor;
+          font-weight: $typeFontWeightRegular;
+          font-size: $chartGridHeaderFontSize;
+          border-bottom: $chartGridHeaderBorderBottomWidth $chartGridHeaderBorderBottomType $chartGridHeaderBorderBottomColor;
+        }
+
+        .ag-header--right .ag-header-cell-label {
+          justify-content: flex-end;
+        }
+
+        .ag-header--stacked .ag-header-cell-label .ag-header-cell-text {
+          white-space: normal;
+          text-align: right;
+          display: inline-block;
+          margin-bottom: $ChartGridHeaderStackedMarginBottom;
+          line-height: $ChartGridHeaderStackedLineHeight;
+        }
+
+        .ag-center-cols-container {
+          font-size: $ChartGridCenterColsFontSize;
+          color: $ChartGridCenterColsColor;
+          font-weight: $typeFontWeightRegular;
+        }
+
+        .ag-group-expanded,
+        .ag-group-contracted {
+          width: $ChartGridExpandedWidth;
+          height: $ChartGridExpandedHeight;
+          position: relative;
+          left: $ChartGridExpandedLeft;
+        }
+
+        .ag-cell-wrapper.ag-row-group {
+          align-items: center;
+        }
+
+        .ag-row {
+          border-color: $ChartGridRowColor;
+        }
+
+        .ag-row .ag-cell {
+          display: flex;
+          align-items: center;
+        }
+
+        .ag-group-checkbox.ag-invisible {
+          display: none;
+        }
+
+        .ag-row-odd {
+          background: $chartGridHeaderBgColor;
+        }
+
+        .ag-row-hover {
+          background: $ChartGridRowOddColor;
+        }
+
+        &.c-chart-grid--documents .ag-row-hover {
+          font-weight: $typeFontWeightBold;
+          cursor: $ChartGridCursor;
+        }
+
+        .ag-row-group-expanded {
+          background: $ChartGridExpandedBg;
+          font-weight: $typeFontWeightBold;
+        }
+
+        .ag-group-child-count {
+          display: none;
+        }
+
+        .ag-row-level-1 .ag-child-hide {
+          display: none;
+        }
+
+        // prevents blue border when clicking on cell 
+        .ag-ltr .ag-has-focus .ag-cell-focus:not(.ag-cell-range-selected) {
+          border: 1px solid transparent;
+        }
+
+        // indent on child row
+        .ag-ltr .ag-row-group-leaf-indent {
+          margin-left: 0;
+        }
+
+        .ag-ltr .ag-row-group-indent-1 {
+          padding-left: $chartGridItrPaddingLeft;
+        }
+
+        // hides the menu in the headers
+        .ag-header-cell-menu-button {
+          display: none;
+        }
+
+        //shows the header menu
+        &.c-chart-grid--documents .ag-header-cell-menu-button {
+          display: flex;
+
+          svg {
+            width: $chartGridSvgWidth;
+            height: $chartGridSvgHeight;
+          }
+        }
+        // t7 class
+        .ag-grid__inner {
+          white-space: normal;
+          line-height: normal;
+          padding: 10px 0;
+          color: $colorSemanticOrangeBase;
+
+          &--padding {
+            padding: 10px;
+          }
+        }
+
+        .ag-grid__inner-name {
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .ag-chart-grid__header-cell {
+          border-bottom: $chartGridHeaderCellBorderBottomWidth $chartGridHeaderCellBorderBottomStyle $chartGridHeaderCellBorderBottomColor;
+          background: chartGridHeaderCellbg;
+        }
+
+        .ag-dot {
+          display: inline-block;
+          width: $chartGridDotWidth;
+          height: $chartGridDotHeight;
+          border-radius: $chartGridDotBorderRadius;
+          margin-right: $chartGridDotMarginRight;
+        }
+
+        .ag-floating-bottom {
+          border-top: none;
+        }
+        .ag-floating-top-container, .ag-floating-bottom-container {
+          font-weight: $typeFontWeightBold;
+          color: $chartGridFloatingColor;
+          border-bottom: $chartGridFloatingBorderBottomWidth $chartGridFloatingBorderBottomType $chartGridFloatingBorderBottomColor;
+          .ag-dot {
+            display: none;
+          }
+        }
+
+        .ag-status-bar {
+          display: none;
+        }
+      }
+    }
+}
+
+// desktop view
+@media only screen and (min-width: $desktopBreakpoint) {
+    @if $isWTC == true {
+      .c-chart-grid {
+        &.ag-theme-balham {
+          .ag-ltr .ag-row-group-indent-1 {
+            padding-left: 50px;
+          }
+          &.c-chart-grid--no-indent {
+            .ag-ltr .ag-row-group-indent-1 {
+              padding-left: 25px;
+            }
+          }
+        }
+      }
+    }
+}

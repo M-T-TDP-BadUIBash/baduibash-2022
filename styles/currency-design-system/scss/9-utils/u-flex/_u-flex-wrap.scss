@@ -1,0 +1,37 @@
+.u-flex-wrap {
+  &--nowrap {
+    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    -webkit-flex-wrap: nowrap;
+  }
+
+  &--wrap {
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+  }
+
+  &--wrap-reverse {
+    flex-wrap: wrap-reverse;
+    -ms-flex-wrap: wrap-reverse;
+    -webkit-flex-wrap: wrap-reverse;
+  }
+
+  &--wrap-inherit {
+    flex-wrap: inherit;
+    -ms-flex-wrap: inherit;
+    -webkit-flex-wrap: inherit;
+  }
+
+  &--wrap-initial {
+    flex-wrap: initial;
+    -ms-flex-wrap: initial;
+    -webkit-flex-wrap: initial;
+  }
+
+  &--wrap-unset {
+    flex-wrap: unset;
+    -ms-flex-wrap: unset;
+    -webkit-flex-wrap: unset;
+  }
+}

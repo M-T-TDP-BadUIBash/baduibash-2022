@@ -1,0 +1,60 @@
+@import 'var-typography';
+
+.c-title {
+    &-1 {
+        // .e-title-1--normal
+        &--normal {
+            @include proto-title-1();
+            color: $titleColor;
+        }
+        // .e-title-1--light
+        &--light {
+            @include proto-title-1();
+            color: $titleLightColor;
+        }
+    }
+
+    &-2 {
+        // .e-title-2--normal
+        &--normal {
+            @include proto-title-2();
+            color: $titleNormalColor;
+        }
+        // .e-title-2--light
+        &--light {
+            @include proto-title-2();
+            color: $titleLightColor;
+        }
+    }
+
+    &-3 {
+        // .e-title-3--primary
+        &--normal {
+            @include proto-title-3();
+            color: $titleNormalColor;
+        }
+        // .e-title-3--dark-bg
+        &--light {
+            @include proto-title-3();
+            color: $titleLightColor;
+        }
+    }
+
+    &-4 {
+        // .e-title-4--primary
+        &--normal {
+            @include proto-title-4();
+            color: $titleNormalColor;
+        }
+
+        &--subtle {
+            @include proto-title-4();
+            color: $titleSubtleColor;
+        }
+        // .e-title-4--secondary
+        &--light {
+            @include proto-title-4();
+            color: $titleLightColor;
+        }
+    }
+}

@@ -1,0 +1,82 @@
+
+@import 
+        '../wt/breakpoints/tokens-breakpoints',  // Breakpoint Values
+        '../wt/icons/tokens-icons',   // Icon Values
+        '../wt/paragraphs/tokens-paragraphs',   // Paragraph Values       
+        '../wt/components/arrow/tokens-arrow',
+        '../wt/components/groupgrid/tokens-groupgrid', //group grid values
+        '../wt/components/date-select/tokens-date-selects',  // Date Select Values
+        '../wt/components/formalert/tokens-formalert', //Form Alert Values
+        '../wt/components/grid/tokens-grid', // Grid values
+        '../wt/components/nav/tokens-nav', //Nav Values
+        '../wt/components/gridfilter/tokens-gridfilter', //gridFilter Values
+        '../wt/components/dropdown/tokens-dropdown', //Dropdown Values       
+        '../wt/components/flyoutMenu/tokens-flyoutMenu', //FlyoutMenu Values
+        '../wt/components/chart/tokens-chart', // Chart Values
+        '../wt/components/chartGrid/tokens-chartGrid', //ChartGrid Values
+        '../wt/components/search/tokens-search', //Search Values
+        '../wt/components/banner/tokens-banner', //Banner Values
+        '../wt/components/card/tokens-card', //card Values
+        '../wt/components/linkList/tokens-linkList', //linkList Values
+        '../wt/components/modal/tokens-modalComponent', //Modal Component Values
+        '../wt/components/panel/tokens-panel', //panel Values
+        '../wt/components/scrollableContainer/tokens-scrollableContainer' , //Scroll Container values
+        '../wt/components/small-buttons/tokens-small-buttons', //Small Buttons Values
+        '../wt/components/container/tokens-containers',  // Container Values
+        '../wt/components/cards/tokens-cards',     //Card Values
+        '../wt/components/load-more/tokens-load-more',     //Load More Values
+        '../wt/components/toggle/tokens-toggle', //toggle Values
+        '../wt/components/tooltips/tokens-tooltips', //tooltip Values
+        '../wt/components/sidenav/tokens-sidenav' , //sidenav Values
+        '../wt/components/spinner/tokens-spinner', //Spinner Values
+        '../wt/components/password/tokens-password', //Password Values
+        '../wt/components/progress-bar/tokens-progress-bar', //Progress Bar
+        '../wt/patterns/action-groups/tokens-action-groups',  // action group Values
+        '../wt/patterns/list-action/tokens-list-action',  // action group Values
+        '../wt/patterns/menu/tokens-menu', //Menu Values
+        '../wt/patterns/modal/tokens-modal',     //Modal Values
+        '../wt/patterns/review-input/tokens-review-inputs',     //Review Input Values
+        '../wt/patterns/header/tokens-header',  // Header Values
+        '../wt/patterns/footer/tokens-footer' ;  // Footer Values
+
+// Abstracts core component styles into key value pair so that it can be generated from json.
+// These tokens set the styles for the Wilmington Trust Theme
+$brand-tokens: (
+  breakpoints: $wt-breakpoints-tokens,
+  paragraphs: $wt-paragraph-tokens,
+  smallButtons: $wt-small-button-tokens,
+  arrow: $wt-arrow-tokens,
+  banner: $wt-banner-tokens,
+  cards: $wt-cards-tokens,
+  chart: $wt-chart-tokens,
+  chartGrid: $wt-chart-grid-tokens,
+  containers: $wt-container-tokens,
+  dropdown: $wt-dropdown-tokens,
+  flyoutMenu: $wt-flyout-menu-tokens,
+  formAlert: $wt-form-alert-tokens,
+  grid: $wt-grid-tokens,
+  gridfilter: $wt-grid-filter-tokens,
+  groupgrid: $wt-group-grid-tokens,
+  date-select: $wt-date-select-tokens,
+  icons: $wt-icon-tokens,
+  loadMore: $wt-load-more-tokens,
+  modalComponent: $wt-modal-component-tokens,
+  modal: $wt-modal-tokens,
+  nav: $wt-nav-tokens,
+  password: $wt-password-tokens,
+  panel: $wt-panel-tokens,
+  review-inputs: $wt-review-input-tokens,
+  search: $wt-search-tokens,
+  menu: $wt-menu-tokens,
+  sidenav: $wt-sidenav-tokens,
+  spinner: $wt-spinner-tokens,
+  scrollableContainer: $wt-scrollable-container-tokens,
+  toggle: $wt-toggle-tokens,
+  tooltip: $wt-tooltip-tokens,
+  header: $wt-header-tokens,
+  footer: $wt-footer-tokens,
+  action-groups: $wt-action-group-tokens,
+  list-action: $wt-list-action-tokens,
+  progress-bar: $wt-progress-bar-tokens,
+  linklist: $wt-link-list-tokens,
+);

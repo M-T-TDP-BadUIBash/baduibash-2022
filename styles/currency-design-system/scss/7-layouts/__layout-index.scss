@@ -1,0 +1,11 @@
+// Layouts //
+// Namespace: l-
+// Are used for design patterns, where items are being arranged rather than decorated.
+// Layout classes are used across all pages, so if you make any changes to the layout classes,
+// you should be VERY CAREFUL because any changes are going to affect each and every page throughout
+// the website.
+
+@import 'flex-grid/__l-flex-grid-index',
+        'l-margin',
+        'l-padding',
+        'container/l-container';

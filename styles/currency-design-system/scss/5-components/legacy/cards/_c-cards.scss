@@ -1,0 +1,76 @@
+.c-cards {
+  @if $isWTC == true {
+      &__list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+      }
+
+      &__item {
+        border-radius: $cardItemBorderRadius;
+        position: relative;
+        cursor: $cardItemCursor;
+      }
+
+      &__title {
+        padding-bottom: $cardItemTitlePaddingBottom;
+      }
+
+      &__content-name {
+        border-right: $cardContentNameBorderRightWidth $cardContentNameBorderRightType $cardContentNameBorderRightColor;
+      }
+
+      &__metrics-item {
+        &--middle {
+          text-align: center;
+        }
+        &--right {
+          text-align: right;
+        }
+      }
+    }
+}
+
+// desktop view
+@media only screen and (min-width: $desktopBreakpoint) {
+    @if $isWTC == true {
+      .c-cards {
+        &__item {
+          align-items: center;
+          padding: $cardItemItemPadding 0;
+        }
+
+        &__title {
+          border-right: $cardContentNameBorderRightWidth $cardContentNameBorderRightType $cardContentNameBorderRightColor;
+          font-weight: $typeFontWeightMedium;
+          padding: $cardMediaPaddingHeight $cardMediaPaddingWidth;
+        }
+
+        &__content-name {
+          border-right: none;
+        }
+
+        &__metrics-item {
+          text-align: center;
+          &--middle {
+            text-align: center;
+          }
+          &--right {
+            text-align: center;
+          }
+        }
+
+        &__relative {
+          position: relative;
+        }
+
+        &__menu {
+          position: absolute;
+          top: $cardMediaMenuTop;
+          right: $cardMediaMenuRight;
+        }
+
+      }
+    }
+}

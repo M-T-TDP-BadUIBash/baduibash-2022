@@ -1,0 +1,19 @@
+.c-badge {
+  &--positive {
+    @include proto-badge();
+    border: $badgeBorderSize $badgeBorderStyle $badgePositiveBorderColor;
+  }
+  &--processing {
+    @include proto-badge();
+    border: $badgeBorderSize $badgeBorderStyle $badgeProcessingBorderColor;
+  }
+  &--inactive {
+    @include proto-badge();
+    border: $badgeBorderSize $badgeBorderStyle $badgeInactiveBorderColor;
+    color: $badgeColorInactive;
+  }
+  &--negative {
+    @include proto-badge();
+    border: $badgeBorderSize $badgeBorderStyle $badgeNegativeBorderColor;
+  }
+}

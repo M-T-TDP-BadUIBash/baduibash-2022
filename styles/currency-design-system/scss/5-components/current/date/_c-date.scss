@@ -1,0 +1,66 @@
+.c-date {
+  align-items: $dateAlignItems;
+  border: $dateBorderSize $dateBorderStyle $dateSelectBorderColor;
+  @include prefixer(border-radius, $dateBorderRadius);
+  @include prefixer(box-sizing, border-box);
+  display: $dateDisplay;
+  width: $dateWidth;
+
+  &__icon {
+    align-self: $dateIconAlignSelf;
+    color: $dateSelectIconColor;
+    margin-left: $dateSelectIconMargin;
+    font-size: $dateSelectIconFontSize;
+
+    &-container {
+      align-items: center;
+      background-color: $dateSelectContainerBackgroundColor;
+      @include prefixer(border-radius, $dateIconContainerBorderRadius);
+      display: $dateIconContainerDisplay;
+      justify-content: center;
+      padding: $dateIconPadding;
+      text-align: $dateIconTextAlign;
+      width: $dateIconContainerWidth;
+    }
+  }
+
+  &__day, &__month, &__year {
+    @include proto-select();
+    @include prefixer(border-radius, $dateSelectBorderRadius);
+    border-top: $dateSelectBorderTop;
+    border-bottom: $dateSelectBorderBottom;
+    border-left: $dateSelectBorderLeft;
+    flex-grow: $dateSelectFlexGrow;
+    width: $dateSelectWidth;
+
+    &:focus {
+      // box-shadow: $dateSelectFocusBoxShadow;
+    }
+
+    &:last-child {
+      @include prefixer(border-radius, $dateSelectLastChildBorderRadius);
+      border: $dateSelectLastChildBorder;
+    }
+  }  
+
+  &--error {
+    border: $textFieldErrorBorderSize $textFieldErrorBorderStyle $textFieldErrorBorderColor;
+    color: $textFieldErrorInputColor;
+    }
+}
+
+@media only screen and (max-width: $breakpoint--small) {
+  .c-date {
+    &__icon {
+     
+      &-container {
+        display: $dateSelectIconContainerDisplayMobile;
+      }      
+    }
+
+    &__month {
+      padding-right: $dateSelectMonthPaddingRight;
+      border-radius: $dateSelectMonthBorderRadius;
+    }
+  }
+}

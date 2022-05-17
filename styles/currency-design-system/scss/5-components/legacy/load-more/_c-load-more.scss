@@ -1,0 +1,58 @@
+// Load More Component Instantiation
+// Requires Proto loadMore
+
+.c-load-more {
+
+    @include proto-button();
+    background-color: $loadMoreBackgroundColor;
+    border: $loadMoreBorderWeight $loadMoreBorderStyle $loadMoreBorderColor;
+    color: $loadMoreTextColor;
+    text-decoration: none;
+
+    &:visited {
+        background-color: $loadMoreBackgroundColor;
+    }
+    &:hover {
+        background-color: darken($loadMoreBackgroundColor, $loadMoreDarkenValue);
+        border-color: darken($loadMoreBorderColor, $loadMoreDarkenValue);
+        color: $loadMoreTextColor;
+
+    }
+    &:active {
+        background-color: darken($loadMoreBackgroundColor, $loadMoreDarkenValue);
+        border-color: darken($loadMoreBorderColor, $loadMoreDarkenValue);
+    }
+    &--loading {
+        @extend .c-load-more;
+        font-size: 0; // Removes space between dots
+        @include dots-loading($loadMoreLoadingFontColor);
+        &:hover {
+            cursor: wait;
+        }
+    }
+    &--autoload {
+        @extend .c-load-more;
+        border: none;
+        background-color: transparent;
+        font-size: 0; // Removes space between dots
+        @include dots-loading($loadMoreAutoLoadFontColor);
+        &:hover {
+            border: none;
+            background-color: transparent;
+            cursor: wait;
+        }
+    }
+
+    &--disabled {
+        @include proto-button();
+        background-color: $loadMoreDisabledBackgroundColor;
+        border-color: $loadMoreDisabledBorderColor;
+        color: $loadMoreDisabledFontColor;
+        &:hover {
+            background-color: $loadMoreDisabledHoverBackgroundColor;
+            border-color: $loadMoreDisabledHoverBorderColor;
+            color: $loadMoreDisabledHoverFontColor;
+            cursor: not-allowed;
+        }
+    }
+}

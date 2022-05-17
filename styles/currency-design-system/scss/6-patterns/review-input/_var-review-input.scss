@@ -1,0 +1,30 @@
+$reviewInputFontColor: $colorGrayDarker;
+$reviewInputIconLinkFontColor: $colorPrimaryBase;
+$reviewInputContainerBackgroundColor: $colorGrayLighter;
+$reviewInputContainerBorder: none;
+$reviewInputContainerBorderRadius: 0;
+$reviewInputLabelFontColor: $colorGrayDarker;
+$reviewInputLabelFontFamily: $typeFontFamily;
+$reviewInputSecureToggleLinkFontColor: $colorPrimaryBase;
+$reviewInputFontSize: $typeScaleLarge;
+$reviewInputLineHeightIncrease: 6px;
+$reviewInputWidth: 100%;
+$reviewInputIconLinkLineHeight: 1;
+$reviewInputIconLinkMarginBottom: $spacingXSmall;
+$reviewInputIconLinkFontSize: $typeScaleXSmall;
+$reviewInputLabelFontSize: $typeScaleXSmall;
+$reviewInputLabelFontWeight: $typeFontWeightMedium;
+$reviewInputLabelMarginBottom: $spacingXSmall;
+$reviewInputLabelMarginRight: $spacingXSmall;
+$reviewInputMultiLineFontSize: $typeScaleMedium;
+$reviewInputSecureToggleLinkFontSize: $typeScaleMedium;
+
+@if $isWTC {
+    $reviewInputFontColor: $colorGrayDarkest;
+    $reviewInputIconLinkFontColor: $colorSecondaryBlueBase;
+    $reviewInputLabelFontColor: $colorGrayDarkest;
+    $reviewInputSecureToggleLinkFontColor: $colorSecondaryBlueBase;
+}
+
+
+
