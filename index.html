@@ -38,7 +38,7 @@
       </div>
     </header>
     <center>
-      <div class="main-form">
+      <div id="main-form" class="main-form">
         <div class="name-group form-group">
           <label for="firstNameField" class="c-label">Full Name</label>
           <div class="full-name">
@@ -66,10 +66,18 @@
         </div>
       </div>
       <div class="submit-btn form-group">
-        <button id="submitBtn" class="c-button--primary" onclick="alert('You did it!')" disabled>
+        <button id="submitBtn" class="c-button--primary" onclick="validateForm()" >
           <span>Submit</span>
         </button>
       </div>
+
+      <div id="error-parent" class="c-loading c-loading--non-blocking hidden">
+        <div class="c-loading__spinner"></div>
+        <div id="error-text" class="c-loading__content">
+          You shouldn't be seeing this error! Uh oh!
+        </div>
+      </div>
+
       <div id="canvas" class="hidden"></div>
       <hr class="c-divider" />
       <span class="end-text"> 

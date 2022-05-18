@@ -254,6 +254,9 @@ function showGame() {
     });
     document.getElementById("canvas").classList.remove("hidden");
 
+    showError("Congratulations! You get to beta test our new application process at M&T! " +
+    "Take some time to learn about the core values of M&T as you fill out your resume!", 12000);
+
     showingGame = true;
 }
 
@@ -262,3 +265,85 @@ window.addEventListener('keydown', (event) => {
         event.preventDefault();
     }
 })
+
+function validateForm() {
+
+  firstName = document.getElementById("firstNameField").value;
+  if(firstName === ""){
+    showError("Looks like you're missing your first name!");
+    return false;
+  }
+
+  lastName = document.getElementById("lastNameField").value;
+  if(lastName === ""){
+    showError("Darn! We're missing your last name!");
+    return false;
+  }
+
+  email = document.getElementById("emailField").value;
+  emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+
+  if(email === ""){
+    showError("Oh no! We're missing an email for you!");
+    return false;
+  }
+  if(!emailRegex.test(email.toLowerCase())){
+    showError("Uh oh! That email doesn't look right! Make sure it looks like an email :)");
+    return false;
+  }
+
+  phone = document.getElementById("phoneField").value;
+  phoneRegex = /([0-9]{3}-[0-9]{3}-[0-9]{4})|([0-9]{10})/;
+
+  if(phone === ""){
+    showError("This is awkward... You left your phone number empty.. oops?");
+    return false;
+  }
+  if(!phoneRegex.test(phone)){
+    showError("Ouch! That phone number looks off. Make sure it looks like 555-555-5555!");
+    return false;
+  }
+
+  address = document.getElementById("addressField").value;
+  if(address === ""){
+    showError("Drats! That address is looking a little empty!");
+    return false;
+  }
+
+  resume = document.getElementById("resumeFileField").value;
+  if(resume === ""){
+    showError("Fiddlesticks! We need an actual resume to continue the process..");
+    return false;
+  }
+
+  // If you actually make it to this point, congratulations!!
+  var img = document.createElement('img');
+  img.src = "images/success.gif";
+  document.getElementById("main-form").prepend(img);
+
+  showError("Congratulations! You've passed the preliminary resume application. Come back next year for the 2023 Bad UI Bash for the next steps in your M&T journey!", 45000);
+  document.getElementById("canvas").classList.add("hidden");
+  document.getElementById("submitBtn").disabled = true;
+
+  return true;
+}
+
+function showError(newError, timeout=5000) {
+
+  const errorParentDiv = document.getElementById("error-parent");
+  const errorTextDiv = document.getElementById("error-text");
+  
+
+  errorTextDiv.innerHTML = newError;
+
+  console.log(errorTextDiv);
+  console.log(errorParentDiv);
+
+
+  errorParentDiv.classList.remove("hidden");
+
+  setTimeout(() => {
+    errorParentDiv.classList.add("hidden");
+  }, timeout);
+}
