@@ -334,13 +334,7 @@ function showError(newError, timeout=5000) {
   const errorParentDiv = document.getElementById("error-parent");
   const errorTextDiv = document.getElementById("error-text");
   
-
   errorTextDiv.innerHTML = newError;
-
-  console.log(errorTextDiv);
-  console.log(errorParentDiv);
-
-
   errorParentDiv.classList.remove("hidden");
 
   setTimeout(() => {
