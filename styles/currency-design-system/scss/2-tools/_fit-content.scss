@@ -1,5 +1,0 @@
-@mixin fit-content($_prop) {
-    #{$_prop}: -moz-fit-content;
-    #{$_prop}: -webkit-fit-content; 
-    #{$_prop}: fit-content;
-}

@@ -1,8 +1,0 @@
-// Function Maps theme tokens to a function to be declared in settings
-
-// Creates SCSS function that takes two values
-@function systemTheme($element, $value) {
-    // Returns the value of the mapped properties from the 'tokens object'.
-    // It is nested to account for nested values in the object
-    @return map-get(map-get($tokens, $element), $value);
-}

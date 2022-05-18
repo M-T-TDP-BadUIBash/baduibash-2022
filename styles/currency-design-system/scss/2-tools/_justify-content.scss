@@ -1,5 +1,0 @@
-@mixin justify-content($_just) {
-    -webkit-box-pack: $_just;
-    -ms-flex-pack: $_just;
-    justify-content: $_just;
-}

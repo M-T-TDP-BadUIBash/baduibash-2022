@@ -1,9 +1,0 @@
-ol {
-  @include proto-list();
-  list-style: decimal;
-
-  li {
-    @include proto-list__item();
-    margin-bottom: 0;
-  }
-}

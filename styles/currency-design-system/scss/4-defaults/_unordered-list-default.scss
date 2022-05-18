@@ -1,8 +1,0 @@
-ul {
-  @include proto-list();
-  list-style: disc;
-
-  li {
-    @include proto-list__item();
-  }
-}

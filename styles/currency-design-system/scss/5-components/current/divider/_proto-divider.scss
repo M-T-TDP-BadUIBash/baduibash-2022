@@ -1,5 +1,0 @@
-@mixin proto-divider() {
-  @include reset-box();
-  border-top: $dividerBorderSize $dividerBorderType $dividerBorderColor;
-  width: $dividerWidth;
-}

@@ -1,9 +1,0 @@
-// Focus Styles
-
-$focusWidth: 5px;
-$focusStyle: solid;
-$focusColor: $colorPrimaryLight;
-
-@if $isWTC {
-    $focusBoxShadow: 0 0 $spacingXXXSmall 3px $colorButtonFocus;
-}
