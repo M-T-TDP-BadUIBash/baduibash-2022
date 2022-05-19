@@ -2,6 +2,7 @@ let width = 0;
 let height = 0;
 let canvas = null;
 let showingGame = false;
+let showingError = false;
 
 let player = null;
 let lines = [];
@@ -294,7 +295,7 @@ function validateForm() {
   }
 
   phone = document.getElementById("phoneField").value;
-  phoneRegex = /([0-9]{3}-[0-9]{3}-[0-9]{4})|([0-9]{10})/;
+  phoneRegex = /([0-9]{3}-[0-9]{3}-[0-9]{4})$/;
 
   if(phone === ""){
     showError("This is awkward... You left your phone number empty.. oops?");
@@ -330,14 +331,17 @@ function validateForm() {
 }
 
 function showError(newError, timeout=5000) {
+  if(showingError) return;
 
   const errorParentDiv = document.getElementById("error-parent");
   const errorTextDiv = document.getElementById("error-text");
   
   errorTextDiv.innerHTML = newError;
   errorParentDiv.classList.remove("hidden");
+  showingError = true;
 
   setTimeout(() => {
     errorParentDiv.classList.add("hidden");
+    showingError = false;
   }, timeout);
 }
